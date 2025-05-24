@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\githubb\\Dormitory-Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16A1FABC-930E-43E5-4446-B6564DF27D80}|DormitoryManagement\\DormitoryManagement.csproj|c:\\users\\hp\\documents\\githubb\\dormitory-management\\dormitorymanagement\\classkhabgah.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A1FABC-930E-43E5-4446-B6564DF27D80}|DormitoryManagement\\DormitoryManagement.csproj|solutionrelative:dormitorymanagement\\classkhabgah.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A1FABC-930E-43E5-4446-B6564DF27D80}|DormitoryManagement\\DormitoryManagement.csproj|c:\\users\\hp\\documents\\githubb\\dormitory-management\\dormitorymanagement\\dormitorymanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{16A1FABC-930E-43E5-4446-B6564DF27D80}|DormitoryManagement\\DormitoryManagement.csproj|solutionrelative:dormitorymanagement\\dormitorymanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "classkhabgah.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\githubb\\Dormitory-Management\\DormitoryManagement\\classkhabgah.cs",
+              "RelativeDocumentMoniker": "DormitoryManagement\\classkhabgah.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\githubb\\Dormitory-Management\\DormitoryManagement\\classkhabgah.cs",
+              "RelativeToolTip": "DormitoryManagement\\classkhabgah.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T17:18:41.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DormitoryManagement.csproj",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\githubb\\Dormitory-Management\\DormitoryManagement\\DormitoryManagement.csproj",
+              "RelativeDocumentMoniker": "DormitoryManagement\\DormitoryManagement.csproj",
+              "ToolTip": "C:\\Users\\HP\\Documents\\githubb\\Dormitory-Management\\DormitoryManagement\\DormitoryManagement.csproj",
+              "RelativeToolTip": "DormitoryManagement\\DormitoryManagement.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-24T17:12:00.41Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
