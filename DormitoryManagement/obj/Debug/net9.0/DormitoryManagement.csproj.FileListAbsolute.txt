@@ -1,0 +1,15 @@
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/bin/Debug/net9.0/DormitoryManagement
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/bin/Debug/net9.0/DormitoryManagement.deps.json
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/bin/Debug/net9.0/DormitoryManagement.runtimeconfig.json
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/bin/Debug/net9.0/DormitoryManagement.dll
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/bin/Debug/net9.0/DormitoryManagement.pdb
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.AssemblyInfoInputs.cache
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.AssemblyInfo.cs
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.csproj.CoreCompileInputs.cache
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.sourcelink.json
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.dll
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/refint/DormitoryManagement.dll
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.pdb
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/DormitoryManagement.genruntimeconfig.cache
+/Users/mac/Documents/GitHub/Dormitory-Management/DormitoryManagement/obj/Debug/net9.0/ref/DormitoryManagement.dll
