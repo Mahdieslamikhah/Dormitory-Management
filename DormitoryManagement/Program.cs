@@ -10,6 +10,7 @@ namespace DormitoryManagement
             Console.WriteLine("Welcom To Dormitory Management..");
             Console.WriteLine("______________________________");
             Console.WriteLine();
+            Console.WriteLine("salammmmmmmmmmmmmmm va dorooooooooooooooood");
         }
     }
 }
