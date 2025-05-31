@@ -19,12 +19,6 @@ class Tajhizat
             ShomareAmval = SakhtPartNumber(partNumber); // ساخت شماره اموال 
 
         }
-
-
-
-
-
-
     private string SakhtPartNumber(int PartNumber)
         {
             if (PartNumber < 1 || PartNumber > 5)

@@ -55,11 +55,11 @@ using DormitoryManagement;
                     Console.WriteLine("2. مسئول بلوک");
                     Console.WriteLine("3. دانشجو");
                     Console.Write("عدد مربوط به نقش خود را وارد کنید: ");
-                    string roleChoice = Console.ReadLine();
+                    string naghshChoice = Console.ReadLine();
                     string role = "";
 
                     // تعیین نقش بر اساس ورودی کاربر
-                    switch (roleChoice)
+                    switch (naghshChoice)
                     {
                         case "1":
                             role = "مسئول خوابگاه";
