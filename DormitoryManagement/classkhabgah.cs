@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace DormitoryManagement
 {
-    class Classkhabgah
+    class Khabgah
     {
         public string Namekhabgah { get; set; }
         public string Adress { get; set; }
         public int Zarfiyatkol { get; set; }
-        public Classmasoulkhabgah Masoulkhabgah { get; set; }
-        public List<Classblook> Blookha { get; set; }
-        public Classkhabgah(string namekhabgah, string adress, int zarfiyatkol, Classmasoulkhabgah masoulkhabgah, List<Classblook> blookha)
+        public Masoulkhabgah Masoulkhabgah { get; set; }
+        public List<Blook> Blookha { get; set; }
+        public Khabgah(string namekhabgah, string adress, int zarfiyatkol, Masoulkhabgah masoulkhabgah, List<Blook> blookha)
         {
             Namekhabgah = namekhabgah;
             Adress = adress;

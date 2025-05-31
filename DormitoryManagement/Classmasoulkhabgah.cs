@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DormitoryManagement
 {
-    class Classmasoulkhabgah : Classperson
+    class Masoulkhabgah : Person
     {
         public string Semat { get; set; }
         public string Namekhabgah { get; set; }
-        public Classmasoulkhabgah(string name, string lastname, int nationalnumber, int phonenumber, string adress,
+        public Masoulkhabgah(string name, string lastname, int nationalnumber, int phonenumber, string adress,
             string semat,string namekhabgah) : base(name, lastname, nationalnumber, phonenumber, adress)
         {
             Semat = semat;

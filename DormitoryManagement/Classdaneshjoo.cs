@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace DormitoryManagement
 {
-    class Classdaneshjoo:Classperson
+    class Daneshjoo: Person
     {
         public int Daneshjonumber { get; set; }
-        public Classotagh Otagh { get; set; }
-        public Classblook Blook { get; set; }
-        public Classkhabgah Khabgah { get; set; }
+        public Otagh Otagh { get; set; }
+        public Blook Blook { get; set; }
+        public Khabgah Khabgah { get; set; }
 
-        public List<Classtajhizat> Tajhizat { get; set; }
+        public List<Tajhizat> Tajhizat { get; set; }
 
 
-        public Classdaneshjoo(int daneshjonumber, Classotagh otagh, Classblook blook, Classkhabgah khabgah, List<Classtajhizat> tajhizat
+        public Daneshjoo(int daneshjonumber, Otagh otagh, Blook blook, Khabgah khabgah, List<Tajhizat> tajhizat
         , string name, string lastname, int nationalnumber, int phonenumber, string adress) : base(name, lastname, nationalnumber, phonenumber
             , adress)
         {

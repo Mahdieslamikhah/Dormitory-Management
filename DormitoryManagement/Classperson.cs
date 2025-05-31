@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DormitoryManagement
 {
-    class Classperson
+    class Person
     {
         public string Name { get; set; }
         public string Lastname { get; set; }
@@ -14,7 +14,7 @@ namespace DormitoryManagement
         public int Phonenumber { get; set; }
         public string Adress { get; set; }
 
-        public Classperson(string name, string lastname, int nationalnumber, int phonenumber, string adress)
+        public Person(string name, string lastname, int nationalnumber, int phonenumber, string adress)
         {
             Name = name;
             Lastname = lastname;
