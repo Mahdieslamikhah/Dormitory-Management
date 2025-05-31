@@ -9,7 +9,7 @@ namespace DormitoryManagement
     class Classdaneshjoo:Classperson
     {
         public int Daneshjonumber { get; set; }
-        public ClassOtagh Otagh { get; set; }
+        public Classotagh Otagh { get; set; }
         public Classblook Blook { get; set; }
         public Classkhabgah Khabgah { get; set; }
 
