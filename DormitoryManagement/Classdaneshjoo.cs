@@ -9,14 +9,14 @@ namespace DormitoryManagement
     class Classdaneshjoo:Classperson
     {
         public int Daneshjonumber { get; set; }
-        public int Otagh { get; set; }
-        public int Blook { get; set; }
-        public string Khabgah { get; set; }
+        public ClassOtagh Otagh { get; set; }
+        public Classblook Blook { get; set; }
+        public Classkhabgah Khabgah { get; set; }
 
-        public List<string> Tajhizat { get; set; }
+        public List<Classtajhizat> Tajhizat { get; set; }
 
 
-        public Classdaneshjoo(int daneshjonumber, int otagh, int blook, string khabgah, List<string> tajhizat
+        public Classdaneshjoo(int daneshjonumber, Classotagh otagh, Classblook blook, Classkhabgah khabgah, List<Classtajhizat> tajhizat
         , string name, string lastname, int nationalnumber, int phonenumber, string adress) : base(name, lastname, nationalnumber, phonenumber
             , adress)
         {
