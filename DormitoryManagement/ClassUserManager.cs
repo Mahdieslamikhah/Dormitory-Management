@@ -28,7 +28,7 @@ namespace DormitoryManagement
 
             User newUser = new User(username, password, naghsh);
             users.Add(newUser);
-            Console.WriteLine("کاربر با موفقیت ثبت‌نام شد.");
+            Console.WriteLine("Ba Movafghiyat Sabte Nam Kardid! hala vard Shavid ...");
 
         }
          // بررسی وجود نام کاربری
