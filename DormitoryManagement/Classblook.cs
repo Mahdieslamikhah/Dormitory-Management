@@ -19,7 +19,7 @@ namespace DormitoryManagement
             NumberOfRooms = numberOfRooms;
             Rooms = new List<Otagh>();
         }
-
+        public Blook() { }
 
     }
 }

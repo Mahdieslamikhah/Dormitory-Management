@@ -22,5 +22,6 @@ namespace DormitoryManagement
             Masoulkhabgah = masoulkhabgah;
             Blookha = blookha;
         }
+        public Khabgah() { }
     }
 }

@@ -16,6 +16,6 @@ namespace DormitoryManagement
             Floor = floor;
             BlookMarbote = blook;
         }
-    
+        public Otagh() { }
     }
 }

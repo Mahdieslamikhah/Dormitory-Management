@@ -117,7 +117,71 @@ class Program
                                     }
                                 }
                                 break;
+                            case "3":
+                                Classashkhas manager = new Classashkhas();
+                                while (true)
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine(" Samane Modiriyat Khabgah");
+                                    Console.WriteLine("1. Afzoodan Masoul Khabgah");
+                                    Console.WriteLine("2. Virayesh Masoul Khabgah");
+                                    Console.WriteLine("3. Hazf Masoul Khabgah");
+                                    Console.WriteLine("4. Namayesh Masoulin Khabgah");
+                                    Console.WriteLine("5. Afzoodan Daneshjoo");
+                                    Console.WriteLine("6. Namayesh Liste Daneshjooha");
+                                    Console.WriteLine("7. Afzoodan Masoul Blook");
+                                    Console.WriteLine("8. Virayesh Masoul Blook");
+                                    Console.WriteLine("9. Hazf Masoul Blook");
+                                    Console.WriteLine("10. Namayesh Masoulin Blook");
+                                    Console.WriteLine("0. Khorooj");
 
+                                    Console.Write("\nEntekhab shoma: ");
+                                    string choice = Console.ReadLine();
+
+                                    switch (choice)
+                                    {
+                                        case "1":
+                                            manager.AddMasoulKhabgah();
+                                            break;
+                                        case "2":
+                                            manager.EditMasoulKhabgah();
+                                            break;
+                                        case "3":
+                                            manager.DeleteMasoulKhabgah();
+                                            break;
+                                        case "4":
+                                            manager.ShowMasoulinKhabgah();
+                                            break;
+                                        case "5":
+                                            manager.AddDaneshjoo();
+                                            break;
+                                        case "6":
+                                            manager.ShowAllDaneshjoo();
+                                            break;
+                                        case "7":
+                                            manager.AddMasoulBlock();
+                                            break;
+                                        case "8":
+                                            manager.EditMasoulBlock();
+                                            break;
+                                        case "9":
+                                            manager.DeleteMasoulBlock();
+                                            break;
+                                        case "10":
+                                            manager.ShowMasoulinBlock();
+                                            break;
+                                        case "0":
+                                            Console.WriteLine("Khorooj az barname...");
+                                            return;
+                                        default:
+                                            Console.WriteLine(" Gozine na motabar ast.");
+                                            break;
+                                    }
+
+                                    Console.WriteLine("\nBaraye edame kelidi bezanid...");
+                                    Console.ReadKey();
+                                }
+                                break;
                                 // سایر گزینه‌ها...
                         }
                     }
