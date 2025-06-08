@@ -78,8 +78,47 @@ class Program
                                     }
                                 }
                                 break;
+                            case "2":
+                                ClassModiriyatBlook blookManager = new ClassModiriyatBlook();
 
-                            // سایر گزینه‌ها...
+                                bool running = true;
+                                while (running)
+                                {
+                                    Console.WriteLine("\nmodiriyat blook");
+                                    Console.WriteLine("1.Add blook");
+                                    Console.WriteLine("2. hazf bllok");
+                                    Console.WriteLine("3. virayesh blook");
+                                    Console.WriteLine("4. namayesh list hameblookha");
+                                    Console.WriteLine("5. khorooj");
+
+                                    Console.Write(" entekhab shoma: ");
+                                    int choice = int.Parse(Console.ReadLine());
+
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            blookManager.AddBlook();
+                                            break;
+                                        case 2:
+                                            blookManager.DeleteBlook();
+                                            break;
+                                        case 3:
+                                            blookManager.EditBlook();
+                                            break;
+                                        case 4:
+                                            blookManager.ShowAllBlooks();
+                                            break;
+                                        case 5:
+                                            running = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine(" گزینه نامعتبر است.");
+                                            break;
+                                    }
+                                }
+                                break;
+
+                                // سایر گزینه‌ها...
                         }
                     }
                     else
