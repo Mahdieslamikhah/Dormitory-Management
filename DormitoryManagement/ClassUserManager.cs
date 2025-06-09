@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 namespace DormitoryManagement
 {
     class UserManager
@@ -13,12 +15,11 @@ namespace DormitoryManagement
                 {
                     return user;
                 }
-
             }
             return null; // یوزر نبود 
-
         }
-        public void Rigister(string username, string password, string naghsh)
+
+        public void Register(string username, string password, string naghsh) // تغییر نام به Register
         {
             // بررسی اینکه آیا کاربر قبلاً ثبت‌نام کرده است
             if (users.Exists(u => u.Username == username))
@@ -28,13 +29,13 @@ namespace DormitoryManagement
 
             User newUser = new User(username, password, naghsh);
             users.Add(newUser);
-            Console.WriteLine("Ba Movafghiyat Sabte Nam Kardid! hala vard Shavid ...");
-
+            Console.WriteLine("با موفقیت ثبت نام کردید! حالا وارد شوید ...");
         }
-         // بررسی وجود نام کاربری
+
+        // بررسی وجود نام کاربری
         public bool UserExists(string username)
-    {
-        return users.Exists(u => u.Username == username);
-    }
+        {
+            return users.Exists(u => u.Username == username);
+        }
     }
 }

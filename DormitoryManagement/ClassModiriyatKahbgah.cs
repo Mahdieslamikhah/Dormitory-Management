@@ -10,23 +10,25 @@ namespace DormitoryManagement
             khabgahha = new List<Khabgah>();
             masoalha = new List<Masoulkhabgah>();
         }
-        public void AddKhabgah(Khabgah x)
+        public void AddKhabgah()
         {
-            khabgahha.Add(x);
-            Console.WriteLine($"Khabgah {x.Namekhabgah} Ezafe Shood!  ");
+            Console.WriteLine("Name Khabgah Ra Vared Konid: ");
+        string name = Console.ReadLine();
+        
+        Console.WriteLine("Address Khabgah Ra Vared Konid: ");
+        string loc = Console.ReadLine();
+        
+        Console.WriteLine("Zarfiyat Khabgah Ra Vared Konid: ");
+        int zarfiyat = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Lotfan Shomare Masoal Khabgah Ra Entekhab Konid: ");
+            Classashkhas masol = new Classashkhas();
+            masol.ShowMasoulinKhabgah();
+        
+        int somareMasoulKhabgah = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Khabgah {name} Ezafe Shood!  ");
         }
-        public void AddMasoulKhabgah(Masoulkhabgah y)
-        {
-            masoalha.Add(y);
-            Console.WriteLine($"{y.Name} Ezafe Shood!  ");
-        }
-      public void ListMasoulhayekhabgah()
-       {
-    Console.WriteLine("List masoulin Khabgah: ");
-    for (int i = 0; i < masoalha.Count; i++)
-    {
-        Console.WriteLine($"{i + 1}. {masoalha[i]}");
-    }
-       }
+       
     }
 }

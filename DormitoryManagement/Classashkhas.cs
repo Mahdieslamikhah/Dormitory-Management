@@ -6,7 +6,7 @@ namespace DormitoryManagement
 {
     class Classashkhas
     {
-        private List<Masoulkhabgah> masoulinKhabgah = new List<Masoulkhabgah>();
+        public List<Masoulkhabgah> masoulinKhabgah = new List<Masoulkhabgah>();
         private List<Masoulblook> masoulinBlock = new List<Masoulblook>();
         private List<Daneshjoo> daneshjooha = new List<Daneshjoo>();
 
