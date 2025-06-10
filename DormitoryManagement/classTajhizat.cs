@@ -5,9 +5,9 @@ class Tajhizat
     public string NoeTajhizat { get; set; }
     public int PartNumber { get; set; } // 001-005
     public string ShomareAmval { get; set; }
-    public string Status { get; set; } // وضعیت (سالم، معیوب، در حال تعمیر)
-    public Otagh OtaghMarbote { get; set; } // اتاق مربوطه
-    public Daneshjoo Malek { get; set; } // دانشجو مالک (تجهیزات شخصی)
+    public string Status { get; set; }
+    public Otagh OtaghMarbote { get; set; }
+    public Daneshjoo Malek { get; set; }
 
         public Tajhizat(string noetajhizat,Otagh otaghMarbote, Daneshjoo malek, int partNumber,string status)
         {

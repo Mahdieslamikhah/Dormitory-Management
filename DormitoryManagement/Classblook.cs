@@ -4,9 +4,9 @@ namespace DormitoryManagement
     class Blook
     {
         public string BlockName { get; set; }
-        public string DormitoryName { get; set; } // خوابگاه مربوطه
-        public Masoulblook BlockManager { get; set; } // مسیول خوابگاه 
-        public int NumberOfFloors { get; set; } // تعداد طبقه 
+        public string DormitoryName { get; set; } 
+        public Masoulblook BlockManager { get; set; }
+        public int NumberOfFloors { get; set; }
         public int NumberOfRooms { get; set; }
         public List<Otagh> Rooms { get; set; }
 
