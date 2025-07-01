@@ -8,8 +8,8 @@ namespace DormitoryManagement
 {
     class Masoulblook : Daneshjoo
     {
-        public static string Semat { get; set; }
-        public static string Nameblook { get; set; }
+        public  string Semat { get; set; }
+        public  string Nameblook { get; set; }
         
         public Masoulblook(string semat,string nameblook,int daneshjonumber, Otagh otagh, Blook blook
         , Khabgah khabgah, List<Tajhizat> tajhizat

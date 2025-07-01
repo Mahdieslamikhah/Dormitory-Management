@@ -23,7 +23,7 @@ namespace DormitoryManagement
         
         Console.WriteLine("Lotfan Shomare Masoal Khabgah Ra Entekhab Konid: ");
             Classashkhas masol = new Classashkhas();
-            masol.ShowMasoulinKhabgah();
+             masol.ShowMasoulinKhabgah();
         
         int somareMasoulKhabgah = int.Parse(Console.ReadLine());
 
