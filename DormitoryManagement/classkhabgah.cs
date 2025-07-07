@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DormitoryManagement
 {
@@ -23,5 +25,13 @@ namespace DormitoryManagement
             Blookha = blookha;
         }
         public Khabgah() { }
+        public Khabgah(string namekhabgah, string adress, int zarfiyatkol, Masoulkhabgah masoulkhabgah)
+        {
+            Namekhabgah = namekhabgah;
+            Adress = adress;
+            Zarfiyatkol = zarfiyatkol;
+            Masoulkhabgah = masoulkhabgah;
+        }
+        
     }
 }

@@ -121,10 +121,10 @@ class Program
                             {
                                 Console.Clear();
                                 Console.WriteLine("Menu Khabgah");
-                                Console.WriteLine("1. Namayesh Khabgah ha");
-                                Console.WriteLine("2. Afzodan Khabgah");
-                                Console.WriteLine("3. Virayesh Khabgah");
-                                Console.WriteLine("4. Hazfe Khabgah");
+                                Console.WriteLine("1. Afzodan Khabgah");
+                                Console.WriteLine("2. Virayesh Khabgah");
+                                Console.WriteLine("3. Hazfe Khabgah");
+                                Console.WriteLine("4. Namayesh Khabgah ha");
                                 Console.WriteLine("0.Menu Asli");
                                 Console.Write("Entekhab Shoma : ");
                                 string khabgahInput = Console.ReadLine();
@@ -133,16 +133,16 @@ class Program
                                 switch (khabgahInput)
                                 {
                                     case "1":
-                                        // کد نمایش خوابگاها
-                                        break;
-                                    case "2":
                                         khahbgah.AddKhabgah();
                                         break;
+                                    case "2":
+                                        khahbgah.EditDormitory();
+                                        break;
                                     case "3":
-                                        // کد برای ویرایش خوابگاه
+                                        khahbgah.RemoveDormitory();
                                         break;
                                     case "4":
-                                        // کد برای حذف خوابگاه
+                                        khahbgah.ShowDormitories();
                                         break;
                                     default:
                                         Console.WriteLine("گزینه نامعتبر است.");
@@ -168,16 +168,16 @@ class Program
                                 switch (choice)
                                 {
                                     case 1:
-                                        blookManager.AddBlook();
+                                        blookManager.AddBlock();
                                         break;
                                     case 2:
-                                        blookManager.DeleteBlook();
+                                        blookManager.RemoveBlock();
                                         break;
                                     case 3:
-                                        blookManager.EditBlook();
+                                        blookManager.EditBlock();
                                         break;
                                     case 4:
-                                        blookManager.ShowAllBlooks();
+                                        blookManager.ShowBlocksByDormitory();
                                         break;
                                     case 5:
                                         running = false; // برگشت به منوی اصلی

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DormitoryManagement
 {
@@ -20,5 +21,6 @@ namespace DormitoryManagement
         {
             return $"{Name}";
         }
+        public Masoulkhabgah(string name, string lastname, int nationalnumber, int phonenumber, string adress) : base(name, lastname, nationalnumber, phonenumber, adress) { }
     }
 }

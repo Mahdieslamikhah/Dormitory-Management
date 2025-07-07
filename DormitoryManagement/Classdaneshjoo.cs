@@ -26,5 +26,6 @@ namespace DormitoryManagement
             Khabgah = khabgah;
             Tajhizat = tajhizat;
         }
+        public Daneshjoo() { }
     }
 }

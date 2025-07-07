@@ -22,5 +22,6 @@ namespace DormitoryManagement
             Phonenumber = phonenumber;
             Adress = adress;
         }
+        public Person() { }
     }
 }
