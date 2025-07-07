@@ -88,5 +88,10 @@ public class ModriyatKhahbgah
             Console.WriteLine($"Name: {dorm.Namekhabgah} | Address: {dorm.Adress} | Zarfiyat: {dorm.Zarfiyatkol} | Masoul: {dorm.Masoulkhabgah?.Name}");
         }
         Console.WriteLine();
+        Console.ReadKey();
     }
-}
+    public List<Khabgah> GetDormitoryList()
+    {
+        return dormitories;
+    }
+}

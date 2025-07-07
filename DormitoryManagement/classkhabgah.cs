@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace DormitoryManagement
 {
-    class Khabgah
+    public class Khabgah
     {
         public string Namekhabgah { get; set; }
         public string Adress { get; set; }

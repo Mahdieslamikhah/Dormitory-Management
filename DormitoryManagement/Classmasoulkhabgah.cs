@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace DormitoryManagement
 {
-    class Masoulkhabgah : Person
+    public class Masoulkhabgah : Person
     {
         public string Semat { get; set; }
         public string Namekhabgah { get; set; }

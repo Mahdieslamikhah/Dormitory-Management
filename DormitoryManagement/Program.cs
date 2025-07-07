@@ -10,6 +10,7 @@ class Program
         UserManager userManager = new UserManager();
         User currentUser = null; // متغیری برای نگهداری کاربر فعلی
 
+
         while (true)
         {
             Console.WriteLine();
@@ -151,7 +152,7 @@ class Program
                             }
                             break;
                         case "2":
-                            ClassModiriyatBlook blookManager = new ClassModiriyatBlook();
+                            ClassModiriyatBlook blookManager = new ClassModiriyatBlook(khahbgah);
                             bool running = true;
                             while (running)
                             {

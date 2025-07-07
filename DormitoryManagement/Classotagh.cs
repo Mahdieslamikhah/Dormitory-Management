@@ -1,7 +1,7 @@
 using System;
 namespace DormitoryManagement
 {
-    class Otagh
+    public class Otagh
     {
         public int RoomNumber { get; set; }
         public int Floor { get; set; }

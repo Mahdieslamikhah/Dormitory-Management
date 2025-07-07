@@ -1,7 +1,7 @@
 using System;
 namespace DormitoryManagement
 {
-    class Blook
+    public class Blook
     {
         public string BlockName { get; set; }
         public string DormitoryName { get; set; } 

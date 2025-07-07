@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DormitoryManagement
 {
-    class Classashkhas
+    public class Classashkhas
     {
         private List<Masoulkhabgah> masoulinKhabgah = new List<Masoulkhabgah>();
         private List<Masoulblook> masoulinBlock = new List<Masoulblook>();

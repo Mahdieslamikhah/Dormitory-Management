@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DormitoryManagement
 {
-    class Masoulblook : Daneshjoo
+    public class Masoulblook : Daneshjoo
     {
         public string Semat { get; set; }
         public string Nameblook { get; set; }

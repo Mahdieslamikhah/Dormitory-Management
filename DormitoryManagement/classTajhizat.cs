@@ -1,6 +1,6 @@
 using System;
 namespace DormitoryManagement {
-class Tajhizat
+public class Tajhizat
 {
     public string NoeTajhizat { get; set; }
     public int PartNumber { get; set; } // 001-005
