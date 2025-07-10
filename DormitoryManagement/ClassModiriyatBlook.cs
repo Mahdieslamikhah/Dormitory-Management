@@ -142,4 +142,12 @@ public class ClassModiriyatBlook
             Console.WriteLine();
         }
     }
+    public List<Masoulblook> GetAllBlocks();
+    {
+        return this.bloc     List<BlockManager>();
+    }
+
+
+
+
 }

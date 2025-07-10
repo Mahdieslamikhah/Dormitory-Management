@@ -190,7 +190,7 @@ class Program
                             }
                             break;
                         case "3":
-                            Classashkhas manager = new Classashkhas();
+                            ModiriyatAshkhas manager = new ModiriyatAshkhas();
                             bool backToMainMenu = false; // متغیر برای کنترل برگشت به منوی اصلی
                             while (!backToMainMenu)
                             {
@@ -214,34 +214,34 @@ class Program
                                 switch (choice)
                                 {
                                     case "1":
-                                        manager.AddMasoulKhabgah();
+                                        manager.AddDormitoryManager();
                                         break;
                                     case "2":
-                                        manager.EditMasoulKhabgah();
+                                        manager.EditDormitoryManager();
                                         break;
                                     case "3":
-                                        manager.DeleteMasoulKhabgah();
+                                        manager.DeleteDormitoryManager();
                                         break;
                                     case "4":
-                                        manager.ShowMasoulinKhabgah();
+                                        manager.ShowDormitoryManagers();
                                         break;
                                     case "5":
-                                        manager.AddDaneshjoo();
+                                        manager.AddStudent();
                                         break;
                                     case "6":
-                                        manager.ShowAllDaneshjoo();
+                                        manager.ShowStudents();
                                         break;
                                     case "7":
-                                        manager.AddMasoulBlock();
+                                        manager.AddBlockManager();
                                         break;
                                     case "8":
-                                        manager.EditMasoulBlock();
+                                        manager.EditBlockManager();
                                         break;
                                     case "9":
-                                        manager.DeleteMasoulBlock();
+                                        manager.DeleteBlockManager();
                                         break;
                                     case "10":
-                                        manager.ShowMasoulinBlock();
+                                        manager.ShowBlockManagers();
                                         break;
                                     case "0":
                                         backToMainMenu = true; // برگشت به منوی اصلی
