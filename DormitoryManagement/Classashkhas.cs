@@ -9,15 +9,21 @@ namespace DormitoryManagement
         private ClassModiriyatBlook blookManager;
         private ModriyatKhahbgah dormitoryManager;
         private List<Daneshjoo> students = new List<Daneshjoo>();
-
         public ModiriyatAshkhas(ClassModiriyatBlook blookManager, ModriyatKhahbgah dormitoryManager)
         {
             this.blookManager = blookManager;
             this.dormitoryManager = dormitoryManager;
         }
-        public ModiriyatAshkhas() { }
+        public ClassModiriyatBlook BlookManager
+        {
+            set { blookManager = value; }
+        }
 
-        // ====================== DORMITORY MANAGER ======================
+        public ModriyatKhahbgah DormitoryManager
+        {
+            set { dormitoryManager = value; }
+        }
+
         public void AddDormitoryManager()
         {
             var dorms = dormitoryManager.GetDormitoryList();

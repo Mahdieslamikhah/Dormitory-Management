@@ -152,7 +152,7 @@ class Program
                             }
                             break;
                         case "2":
-                            ClassModiriyatBlook blookManager = new ClassModiriyatBlook(khahbgah);
+                            ClassModiriyatBlook blokManager = new ClassModiriyatBlook(khahbgah);
                             bool running = true;
                             while (running)
                             {
@@ -169,16 +169,16 @@ class Program
                                 switch (choice)
                                 {
                                     case 1:
-                                        blookManager.AddBlock();
+                                        blokManager.AddBlock();
                                         break;
                                     case 2:
-                                        blookManager.RemoveBlock();
+                                        blokManager.RemoveBlock();
                                         break;
                                     case 3:
-                                        blookManager.EditBlock();
+                                        blokManager.EditBlock();
                                         break;
                                     case 4:
-                                        blookManager.ShowBlocksByDormitory();
+                                        blokManager.ShowBlocksByDormitory();
                                         break;
                                     case 5:
                                         running = false; // برگشت به منوی اصلی
@@ -190,7 +190,8 @@ class Program
                             }
                             break;
                         case "3":
-                            ModiriyatAshkhas manager = new ModiriyatAshkhas();
+                            ClassModiriyatBlook blookManager = new ClassModiriyatBlook(khahbgah);
+                            ModiriyatAshkhas manager = new ModiriyatAshkhas(blookManager, khahbgah);
                             bool backToMainMenu = false; // متغیر برای کنترل برگشت به منوی اصلی
                             while (!backToMainMenu)
                             {

@@ -1,4 +1,7 @@
 ﻿using DormitoryManagement;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class ClassModiriyatBlook
 {
@@ -9,6 +12,7 @@ public class ClassModiriyatBlook
     {
         this.dormManager = dormManager;
     }
+
     public ClassModiriyatBlook() { }
 
     public void AddBlock()
@@ -22,7 +26,7 @@ public class ClassModiriyatBlook
         Console.WriteLine("Tedad otagh-ha ra vared konid:");
         int rooms = int.Parse(Console.ReadLine());
 
-        Console.WriteLine(" List khabgah-ha:");
+        Console.WriteLine("List khabgah-ha:");
         var dormitories = dormManager.GetDormitoryList();
         for (int i = 0; i < dormitories.Count; i++)
         {
@@ -34,7 +38,7 @@ public class ClassModiriyatBlook
 
         if (selectedIndex < 0 || selectedIndex >= dormitories.Count)
         {
-            Console.WriteLine(" Entekhab na motabar ast.");
+            Console.WriteLine("Entekhab na motabar ast.");
             return;
         }
 
@@ -45,7 +49,7 @@ public class ClassModiriyatBlook
 
         if (blocks.Any(b => b.BlockName == name && b.DormitoryName == dormitoryName))
         {
-            Console.WriteLine(" Block ba in name dar in khabgah ghablan sabt shode.\n");
+            Console.WriteLine("Block ba in name dar in khabgah ghablan sabt shode.\n");
             return;
         }
 
@@ -58,64 +62,66 @@ public class ClassModiriyatBlook
             BlockManager = new Masoulblook { Name = managerName }
         });
 
-        Console.WriteLine($" Block '{name}' baraye khabgah '{dormitoryName}' ba movafaghiat ezafe shod.\n");
+        Console.WriteLine($"Block '{name}' baraye khabgah '{dormitoryName}' ba movafaghiat ezafe shod.\n");
     }
+
     public void EditBlock()
     {
-        Console.WriteLine(" Name block ra vared konid:");
+        Console.WriteLine("Name block ra vared konid:");
         string name = Console.ReadLine();
 
-        Console.WriteLine(" Name khabgah marboot ra vared konid:");
+        Console.WriteLine("Name khabgah marboot ra vared konid:");
         string dormitoryName = Console.ReadLine();
 
         var block = blocks.FirstOrDefault(b => b.BlockName == name && b.DormitoryName == dormitoryName);
         if (block != null)
         {
-            Console.WriteLine(" Name jadid block:");
+            Console.WriteLine("Name jadid block:");
             block.BlockName = Console.ReadLine();
 
-            Console.WriteLine(" Tedad tabaghat jadid:");
+            Console.WriteLine("Tedad tabaghat jadid:");
             block.NumberOfFloors = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(" Tedad otagh jadid:");
+            Console.WriteLine("Tedad otagh jadid:");
             block.NumberOfRooms = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(" Name masoul jadid:");
+            Console.WriteLine("Name masoul jadid:");
             block.BlockManager.Name = Console.ReadLine();
 
-            Console.WriteLine(" Name jadid khabgah:");
+            Console.WriteLine("Name jadid khabgah:");
             block.DormitoryName = Console.ReadLine();
 
-            Console.WriteLine(" Etela'at block update shod.\n");
+            Console.WriteLine("Etela'at block update shod.\n");
         }
         else
         {
-            Console.WriteLine(" Block peyda nashod.\n");
+            Console.WriteLine("Block peyda nashod.\n");
         }
     }
+
     public void RemoveBlock()
     {
-        Console.WriteLine(" Name block ra vared konid:");
+        Console.WriteLine("Name block ra vared konid:");
         string name = Console.ReadLine();
 
-        Console.WriteLine(" Name khabgah marboot ra vared konid:");
+        Console.WriteLine("Name khabgah marboot ra vared konid:");
         string dormitoryName = Console.ReadLine();
 
         var block = blocks.FirstOrDefault(b => b.BlockName == name && b.DormitoryName == dormitoryName);
         if (block != null)
         {
             blocks.Remove(block);
-            Console.WriteLine(" Block ba movafaghiat hazf shod.\n");
+            Console.WriteLine("Block ba movafaghiat hazf shod.\n");
         }
         else
         {
-            Console.WriteLine(" Block peyda nashod.\n");
+            Console.WriteLine("Block peyda nashod.\n");
         }
     }
 
     public void ShowBlocks()
     {
-        Console.WriteLine(" List block-ha:");
+        Console.WriteLine("List block-ha:");
         foreach (var block in blocks)
         {
             Console.WriteLine($"Block: {block.BlockName} | Floors: {block.NumberOfFloors} | Rooms: {block.NumberOfRooms} | Manager: {block.BlockManager.Name} | Dormitory: {block.DormitoryName}");
@@ -131,7 +137,7 @@ public class ClassModiriyatBlook
         var filtered = blocks.Where(b => b.DormitoryName == dormName).ToList();
         if (filtered.Count == 0)
         {
-            Console.WriteLine(" Hich blocki baraye in khabgah peyda nashod.\n");
+            Console.WriteLine("Hich blocki baraye in khabgah peyda nashod.\n");
         }
         else
         {
@@ -142,12 +148,9 @@ public class ClassModiriyatBlook
             Console.WriteLine();
         }
     }
-    public List<Masoulblook> GetAllBlocks();
+
+    public List<Blook> GetAllBlocks()
     {
-        return this.bloc     List<BlockManager>();
+        return blocks;
     }
-
-
-
-
 }
