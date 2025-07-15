@@ -88,8 +88,6 @@ namespace DormitoryManagement
             if (Console.ReadLine().ToLower() == "y")
                 AddDormitoryManager();
         }
-
-        // ====================== BLOCK MANAGER ======================
         public void AddBlockManager()
         {
             Console.WriteLine("Nam khabgah ra vared konid:");
@@ -156,8 +154,6 @@ namespace DormitoryManagement
             if (Console.ReadLine().ToLower() == "y")
                 AddBlockManager();
         }
-
-        // ====================== STUDENT ======================
         public void AddStudent()
         {
             Console.WriteLine("Nam:");
@@ -172,8 +168,6 @@ namespace DormitoryManagement
             string address = Console.ReadLine();
             Console.WriteLine("Shomare daneshjooei:");
             int studentNum = int.Parse(Console.ReadLine());
-
-            // Inja mitooni otagh, block, khabgah, tajhizat ro set koni ba data mojood
             Daneshjoo newStudent = new Daneshjoo(studentNum, null, null, null, new List<Tajhizat>(), name, lastname, national, phone, address);
             students.Add(newStudent);
             Console.WriteLine("Daneshjoo ezafe shod.");
@@ -237,7 +231,6 @@ namespace DormitoryManagement
                 Console.WriteLine($"{s.Name} {s.Lastname} - {s.Daneshjonumber}");
             }
         }
-        // حذف مسئول خوابگاه
         public void DeleteDormitoryManager()
         {
             var dorms = dormitoryManager.GetDormitoryList();
@@ -269,8 +262,6 @@ namespace DormitoryManagement
             selectedDorm.Masoulkhabgah = null;
             Console.WriteLine("Masoul khabgah hazf shod.");
         }
-
-        // نمایش مسئول خوابگاه
         public void ShowDormitoryManagers()
         {
             var dorms = dormitoryManager.GetDormitoryList();
@@ -289,8 +280,6 @@ namespace DormitoryManagement
                     Console.WriteLine($"{dorm.Namekhabgah}: Masoul sabt nashode ast.");
             }
         }
-
-        // حذف مسئول بلوک
         public void DeleteBlockManager()
         {
             Console.WriteLine("Nam khabgah ra vared konid:");
@@ -315,18 +304,15 @@ namespace DormitoryManagement
             block.BlockManager = null;
             Console.WriteLine("Masoul block hazf shod.");
         }
-
-        // نمایش مسئول بلوک
         public void ShowBlockManagers()
         {
             Console.WriteLine("Nam khabgah ra vared konid:");
             string dormName = Console.ReadLine();
-            var blocks = blookManager.GetAllBlocks();
-            if (blocks.Count == 0)
-            {
-                Console.WriteLine("Hich blocki vojood nadarad.");
-                return;
-            }
+
+            var blocks = blookManager.GetAllBlocks()
+            .Where(b => b.DormitoryName == dormName)
+            .ToList();
+
 
             Console.WriteLine("List masoul block-ha:");
             foreach (var block in blocks)

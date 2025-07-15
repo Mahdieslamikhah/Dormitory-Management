@@ -9,6 +9,9 @@ class Program
         ModriyatKhahbgah khahbgah = new ModriyatKhahbgah();
         UserManager userManager = new UserManager();
         User currentUser = null; // متغیری برای نگهداری کاربر فعلی
+        ModriyatKhahbgah khabgah = new ModriyatKhahbgah();
+        ClassModiriyatBlook sharedBlockManager = new ClassModiriyatBlook(khahbgah);
+        ModiriyatAshkhas manager = new ModiriyatAshkhas(sharedBlockManager, khahbgah);
 
 
         while (true)
@@ -118,7 +121,7 @@ class Program
                     switch (input2)
                     {
                         case "1":
-                            while (true) // حلقه برای منوی مدیریت خوابگاه
+                            while (true)
                             {
                                 Console.Clear();
                                 Console.WriteLine("Menu Khabgah");
@@ -129,7 +132,7 @@ class Program
                                 Console.WriteLine("0.Menu Asli");
                                 Console.Write("Entekhab Shoma : ");
                                 string khabgahInput = Console.ReadLine();
-                                if (khabgahInput == "0") break; // برگشت به منوی اصلی
+                                if (khabgahInput == "0") break;
 
                                 switch (khabgahInput)
                                 {
@@ -152,7 +155,6 @@ class Program
                             }
                             break;
                         case "2":
-                            ClassModiriyatBlook blokManager = new ClassModiriyatBlook(khahbgah);
                             bool running = true;
                             while (running)
                             {
@@ -169,19 +171,19 @@ class Program
                                 switch (choice)
                                 {
                                     case 1:
-                                        blokManager.AddBlock();
+                                        sharedBlockManager.AddBlock();
                                         break;
                                     case 2:
-                                        blokManager.RemoveBlock();
+                                        sharedBlockManager.RemoveBlock();
                                         break;
                                     case 3:
-                                        blokManager.EditBlock();
+                                        sharedBlockManager.EditBlock();
                                         break;
                                     case 4:
-                                        blokManager.ShowBlocksByDormitory();
+                                        sharedBlockManager.ShowBlocksByDormitory();
                                         break;
                                     case 5:
-                                        running = false; // برگشت به منوی اصلی
+                                        running = false;
                                         break;
                                     default:
                                         Console.WriteLine("گزینه نامعتبر است.");
@@ -190,9 +192,7 @@ class Program
                             }
                             break;
                         case "3":
-                            ClassModiriyatBlook blookManager = new ClassModiriyatBlook(khahbgah);
-                            ModiriyatAshkhas manager = new ModiriyatAshkhas(blookManager, khahbgah);
-                            bool backToMainMenu = false; // متغیر برای کنترل برگشت به منوی اصلی
+                            bool backToMainMenu = false;
                             while (!backToMainMenu)
                             {
                                 Console.Clear();
