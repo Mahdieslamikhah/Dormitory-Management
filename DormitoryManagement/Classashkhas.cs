@@ -323,6 +323,9 @@ namespace DormitoryManagement
                     Console.WriteLine($"{block.BlockName} ({block.DormitoryName}): Masoul sabt nashode ast.");
             }
         }
-
+        public Daneshjoo FindDaneshjooByNumber(int number)
+        {
+            return students.FirstOrDefault(d => d.Daneshjonumber == number);
+        }
     }
 }

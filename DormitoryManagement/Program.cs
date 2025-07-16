@@ -12,6 +12,7 @@ class Program
         ModriyatKhahbgah khabgah = new ModriyatKhahbgah();
         ClassModiriyatBlook sharedBlockManager = new ClassModiriyatBlook(khahbgah);
         ModiriyatAshkhas manager = new ModiriyatAshkhas(sharedBlockManager, khahbgah);
+        ClassModiriyatAmval amvalManager = new ClassModiriyatAmval(manager);
 
 
         while (true)
@@ -251,11 +252,53 @@ class Program
                                         Console.WriteLine("گزینه نامعتبر است.");
                                         break;
                                 }
+                            }
+                            ;
+                        case "5":
+                            bool returnToMainMenu = false;
+                            while (!returnToMainMenu)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Menu Modiriyat Amval:");
+                                Console.WriteLine("1. Afzoodan Tajhizat");
+                                Console.WriteLine("2. Namayesh hame Tajhizat");
+                                Console.WriteLine("3. Hazf Tajhizat");
+                                Console.WriteLine("4. Jostejoo bar asas shomare daneshjoo");
+                                Console.WriteLine("0. Bargasht be Menu Asli");
 
-                                Console.WriteLine("\nBaraye edame kelidi bezanid...");
+                                Console.Write("Entekhab shoma: ");
+                                string amvalInput = Console.ReadLine();
+
+                                switch (amvalInput)
+                                {
+                                    case "1":
+                                        amvalManager.AddTajhizat();
+                                        break;
+                                    case "2":
+                                        amvalManager.ShowAllTajhizat();
+                                        break;
+                                    case "3":
+                                        amvalManager.DeleteTajhizat();
+                                        break;
+                                    case "4":
+                                        amvalManager.SearchByStudentNumber();
+                                        break;
+                                    case "0":
+                                        returnToMainMenu = true;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Gozine na motabar.");
+                                        break;
+                                }
+
+                                Console.WriteLine("\nBaraye edame ENTER bezanid...");
                                 Console.ReadKey();
                             }
                             break;
+                            Console.WriteLine("\nBaraye edame kelidi bezanid...");
+                            Console.ReadKey();
+                    //}
+                    //break;
                         case "0":
                             Console.WriteLine("khoroj...");
                             return; // خروج از برنامه
