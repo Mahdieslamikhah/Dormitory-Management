@@ -279,6 +279,7 @@ namespace DormitoryManagement
                 else
                     Console.WriteLine($"{dorm.Namekhabgah}: Masoul sabt nashode ast.");
             }
+            Console.ReadKey();
         }
         public void DeleteBlockManager()
         {
@@ -322,6 +323,7 @@ namespace DormitoryManagement
                 else
                     Console.WriteLine($"{block.BlockName} ({block.DormitoryName}): Masoul sabt nashode ast.");
             }
+            Console.ReadKey();
         }
         public Daneshjoo FindDaneshjooByNumber(int number)
         {

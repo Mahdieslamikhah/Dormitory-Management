@@ -9,7 +9,6 @@ class Program
         ModriyatKhahbgah khahbgah = new ModriyatKhahbgah();
         UserManager userManager = new UserManager();
         User currentUser = null; // متغیری برای نگهداری کاربر فعلی
-        ModriyatKhahbgah khabgah = new ModriyatKhahbgah();
         ClassModiriyatBlook sharedBlockManager = new ClassModiriyatBlook(khahbgah);
         ModiriyatAshkhas manager = new ModiriyatAshkhas(sharedBlockManager, khahbgah);
         ClassModiriyatAmval amvalManager = new ClassModiriyatAmval(manager);
@@ -115,7 +114,7 @@ class Program
                     Console.WriteLine("1. Modriyat Khabgah");
                     Console.WriteLine("2. Modriyat Block");
                     Console.WriteLine("3. Modriyat Ashkhas");
-                    Console.WriteLine("4. Modriyat Danshjoyan");
+                    Console.WriteLine("4. Modriyat Amval");
                     Console.WriteLine("0. خروج");
                     string input2 = Console.ReadLine();
 
@@ -253,8 +252,8 @@ class Program
                                         break;
                                 }
                             }
-                            ;
-                        case "5":
+                            break;
+                        case "4":
                             bool returnToMainMenu = false;
                             while (!returnToMainMenu)
                             {
@@ -294,11 +293,10 @@ class Program
                                 Console.WriteLine("\nBaraye edame ENTER bezanid...");
                                 Console.ReadKey();
                             }
-                            break;
                             Console.WriteLine("\nBaraye edame kelidi bezanid...");
                             Console.ReadKey();
-                    //}
-                    //break;
+                            break;
+                            
                         case "0":
                             Console.WriteLine("khoroj...");
                             return; // خروج از برنامه

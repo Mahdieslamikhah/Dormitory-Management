@@ -9,9 +9,11 @@ namespace DormitoryManagement
     class ClassModiriyatAmval
     {
         private List<Tajhizat> tajhizatList;
+        private ModiriyatAshkhas ashkhasManager;
 
-        public ClassModiriyatAmval()
+        public ClassModiriyatAmval(ModiriyatAshkhas manager)
         {
+            ashkhasManager = manager;
             tajhizatList = new List<Tajhizat>();
         }
 
@@ -97,13 +99,10 @@ namespace DormitoryManagement
                 Console.WriteLine($"Shomare Amval: {t.ShomareAmval}, Noe: {t.NoeTajhizat}, Vaziat: {t.Status}");
             }
         }
-
-        // تابع کمکی برای جستجوی دانشجو در بین اشخاص تعریف‌شده
         private Daneshjoo FindDaneshjoo(int daneshjoNumber)
         {
-            // In real app, this should access ModiriyatAshkhas list
-            // For now, simulate if necessary
-            return .GetStudents().FirstOrDefault(d => d.Daneshjonumber == daneshjoNumber);
+            return ashkhasManager.FindDaneshjooByNumber(daneshjoNumber);
         }
+
     }
 }
