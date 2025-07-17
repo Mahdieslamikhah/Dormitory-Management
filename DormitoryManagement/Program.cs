@@ -196,62 +196,73 @@ class Program
                             while (!backToMainMenu)
                             {
                                 Console.Clear();
-                                Console.WriteLine("Menu Ashkhas");
-                                Console.WriteLine("1. Afzoodan Masoul Khabgah");
-                                Console.WriteLine("2. Virayesh Masoul Khabgah");
-                                Console.WriteLine("3. Hazf Masoul Khabgah");
-                                Console.WriteLine("4. Namayesh Masoulin Khabgah");
-                                Console.WriteLine("5. Afzoodan Daneshjoo");
-                                Console.WriteLine("6. Namayesh Liste Daneshjooha");
-                                Console.WriteLine("7. Afzoodan Masoul Blook");
-                                Console.WriteLine("8. Virayesh Masoul Blook");
-                                Console.WriteLine("9. Hazf Masoul Blook");
-                                Console.WriteLine("10. Namayesh Masoulin Blook");
-                                Console.WriteLine("0.Menu Asli");
+                                Console.WriteLine("===== Samane Modiriyat Khabgah =====");
+                                Console.WriteLine("1. Ezafe kardan daneshjoo");
+                                Console.WriteLine("2. Namayesh daneshjooyan");
+                                Console.WriteLine("3. Virayesh daneshjoo");
+                                Console.WriteLine("4. Hazf daneshjoo");
+                                Console.WriteLine("5. Sabt nam daneshjoo dar khabgah");
+                                Console.WriteLine("6. Jabejaei daneshjoo");
+                                Console.WriteLine("7. Ezafe kardan masoul khabgah");
+                                Console.WriteLine("8. Virayesh masoul khabgah");
+                                Console.WriteLine("9. Hazf masoul khabgah");
+                                Console.WriteLine("10. Namayesh masoulan khabgah");
+                                Console.WriteLine("11. Ezafe kardan masoul block");
+                                Console.WriteLine("12. Virayesh masoul block");
+                                Console.WriteLine("13. Hazf masoul block");
+                                Console.WriteLine("14. Namayesh masoulan block");
+                                Console.WriteLine("0. Khorooj");
+                                Console.Write("Entekhab shoma: ");
 
-                                Console.Write("\nEntekhab shoma: ");
                                 string choice = Console.ReadLine();
 
-                                switch (choice)
-                                {
-                                    case "1":
-                                        manager.AddDormitoryManager();
-                                        break;
-                                    case "2":
-                                        manager.EditDormitoryManager();
-                                        break;
-                                    case "3":
-                                        manager.DeleteDormitoryManager();
-                                        break;
-                                    case "4":
-                                        manager.ShowDormitoryManagers();
-                                        break;
-                                    case "5":
-                                        manager.AddStudent();
-                                        break;
-                                    case "6":
-                                        manager.ShowStudents();
-                                        break;
-                                    case "7":
-                                        manager.AddBlockManager();
-                                        break;
-                                    case "8":
-                                        manager.EditBlockManager();
-                                        break;
-                                    case "9":
-                                        manager.DeleteBlockManager();
-                                        break;
-                                    case "10":
-                                        manager.ShowBlockManagers();
-                                        break;
-                                    case "0":
-                                        backToMainMenu = true; // برگشت به منوی اصلی
-                                        break;
-                                    default:
-                                        Console.WriteLine("گزینه نامعتبر است.");
-                                        break;
+                                Console.Clear();
+                                    switch (choice)
+                                    {
+                                        case "1":
+                                            manager.AddStudent();
+                                            break;
+                                        case "2":
+                                            manager.ShowStudents();
+                                            break;
+                                        case "3":
+                                            manager.EditStudent();
+                                            break;
+                                        case "4":
+                                            manager.DeleteStudent();
+                                            break;
+                                        case "5":
+                                            manager.RegisterStudentInDorm();
+                                            break;
+                                        case "6":
+                                            manager.MoveStudent();
+                                            break;
+                                        case "7":
+                                            manager.AddDormitoryManager();
+                                            break;
+                                        case "8":
+                                            manager.EditDormitoryManager();
+                                            break;
+                                        case "9":
+                                            manager.DeleteDormitoryManager();
+                                            break;
+                                        case "10":
+                                            manager.ShowDormitoryManagers();
+                                            break;
+                                        case "11":
+                                            manager.AddBlockManager();
+                                            break;
+                                        case "12":
+                                            manager.EditBlockManager();
+                                            break;
+                                        case "13":
+                                            manager.DeleteBlockManager();
+                                            break;
+                                        case "14":
+                                            manager.ShowBlockManagers();
+                                            break;
+                                    }
                                 }
-                            }
                             break;
                         case "4":
                             bool returnToMainMenu = false;

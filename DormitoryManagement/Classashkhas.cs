@@ -131,6 +131,81 @@ namespace DormitoryManagement
 
             Console.WriteLine("Masoul block entekhab shod.");
         }
+        public void RegisterStudentInDorm()
+        {
+            ShowStudents();
+            Console.WriteLine("Shomare daneshjoo ra vared konid:");
+            int id = int.Parse(Console.ReadLine());
+            var student = students.FirstOrDefault(s => s.Daneshjonumber == id);
+            if (student == null)
+            {
+                Console.WriteLine("Daneshjoo yaft nashod.");
+                return;
+            }
+
+            var dorms = dormitoryManager.GetDormitoryList();
+            if (dorms.Count == 0)
+            {
+                Console.WriteLine("Hich khabgahi vojood nadarad.");
+                return;
+            }
+
+            Console.WriteLine("List khabgah-ha:");
+            for (int i = 0; i < dorms.Count; i++)
+                Console.WriteLine($"{i + 1}. {dorms[i].Namekhabgah}");
+            Console.WriteLine("Entekhab khabgah:");
+            int dormIndex = int.Parse(Console.ReadLine()) - 1;
+
+            var selectedDorm = dorms[dormIndex];
+            var blocks = blookManager.GetAllBlocks().Where(b => b.DormitoryName == selectedDorm.Namekhabgah).ToList();
+
+            if (blocks.Count == 0)
+            {
+                Console.WriteLine("Block vojood nadarad.");
+                return;
+            }
+
+            Console.WriteLine("List block-ha:");
+            for (int i = 0; i < blocks.Count; i++)
+                Console.WriteLine($"{i + 1}. {blocks[i].BlockName}");
+            Console.WriteLine("Entekhab block:");
+            int blockIndex = int.Parse(Console.ReadLine()) - 1;
+
+            var selectedBlock = blocks[blockIndex];
+
+            Console.WriteLine("Shomare otagh:");
+            int roomNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Tabaghe otagh:");
+            int floor = int.Parse(Console.ReadLine());
+            Otagh otagh = new Otagh(roomNumber, floor, selectedBlock);
+            student.Otagh = otagh;
+
+            student.Khabgah = selectedDorm;
+            student.Blook = selectedBlock; 
+            otagh.DaneshjoosMarbote.Add(student);
+
+            Console.WriteLine("Sabt naam anjam shod.");
+        }
+
+
+        public void MoveStudent()
+        {
+            ShowStudents();
+            Console.WriteLine("Shomare daneshjoo ra vared konid:");
+            int id = int.Parse(Console.ReadLine());
+            var student = students.FirstOrDefault(s => s.Daneshjonumber == id);
+            if (student == null)
+            {
+                Console.WriteLine("Daneshjoo yaft nashod.");
+                return;
+            }
+
+            Console.WriteLine("Gozaresh makan ghabli: ");
+            Console.WriteLine($"Khabgah: {student.Khabgah}, Blook: {student.Blook}, Otagh: {student.Otagh}");
+
+            RegisterStudentInDorm();
+        }
 
         public void EditBlockManager()
         {
@@ -230,6 +305,7 @@ namespace DormitoryManagement
             {
                 Console.WriteLine($"{s.Name} {s.Lastname} - {s.Daneshjonumber}");
             }
+            Console.ReadKey();
         }
         public void DeleteDormitoryManager()
         {
