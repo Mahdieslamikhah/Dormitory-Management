@@ -106,8 +106,6 @@ class Program
                         }
                     }
                 }
-
-                // نمایش منوی اصلی
                 while (true)
                 {
                     Console.WriteLine($"Menu Asli");
@@ -115,7 +113,7 @@ class Program
                     Console.WriteLine("2. Modriyat Block");
                     Console.WriteLine("3. Modriyat Ashkhas");
                     Console.WriteLine("4. Modriyat Amval");
-                    Console.WriteLine("0. خروج");
+                    Console.WriteLine("0. khoroj");
                     string input2 = Console.ReadLine();
 
                     switch (input2)
@@ -147,9 +145,6 @@ class Program
                                         break;
                                     case "4":
                                         khahbgah.ShowDormitories();
-                                        break;
-                                    default:
-                                        Console.WriteLine("گزینه نامعتبر است.");
                                         break;
                                 }
                             }
@@ -185,9 +180,6 @@ class Program
                                     case 5:
                                         running = false;
                                         break;
-                                    default:
-                                        Console.WriteLine("گزینه نامعتبر است.");
-                                        break;
                                 }
                             }
                             break;
@@ -196,7 +188,6 @@ class Program
                             while (!backToMainMenu)
                             {
                                 Console.Clear();
-                                Console.WriteLine("===== Samane Modiriyat Khabgah =====");
                                 Console.WriteLine("1. Ezafe kardan daneshjoo");
                                 Console.WriteLine("2. Namayesh daneshjooyan");
                                 Console.WriteLine("3. Virayesh daneshjoo");
@@ -217,50 +208,53 @@ class Program
                                 string choice = Console.ReadLine();
 
                                 Console.Clear();
-                                    switch (choice)
-                                    {
-                                        case "1":
-                                            manager.AddStudent();
-                                            break;
-                                        case "2":
-                                            manager.ShowStudents();
-                                            break;
-                                        case "3":
-                                            manager.EditStudent();
-                                            break;
-                                        case "4":
-                                            manager.DeleteStudent();
-                                            break;
-                                        case "5":
-                                            manager.RegisterStudentInDorm();
-                                            break;
-                                        case "6":
-                                            manager.MoveStudent();
-                                            break;
-                                        case "7":
-                                            manager.AddDormitoryManager();
-                                            break;
-                                        case "8":
-                                            manager.EditDormitoryManager();
-                                            break;
-                                        case "9":
-                                            manager.DeleteDormitoryManager();
-                                            break;
-                                        case "10":
-                                            manager.ShowDormitoryManagers();
-                                            break;
-                                        case "11":
-                                            manager.AddBlockManager();
-                                            break;
-                                        case "12":
-                                            manager.EditBlockManager();
-                                            break;
-                                        case "13":
-                                            manager.DeleteBlockManager();
-                                            break;
-                                        case "14":
-                                            manager.ShowBlockManagers();
-                                            break;
+                                switch (choice)
+                                {
+                                    case "1":
+                                        manager.AddStudent();
+                                        break;
+                                    case "2":
+                                        manager.ShowStudents();
+                                        break;
+                                    case "3":
+                                        manager.EditStudent();
+                                        break;
+                                    case "4":
+                                        manager.DeleteStudent();
+                                        break;
+                                    case "5":
+                                        manager.RegisterStudentInDorm();
+                                        break;
+                                    case "6":
+                                        manager.MoveStudent();
+                                        break;
+                                    case "7":
+                                        manager.AddDormitoryManager();
+                                        break;
+                                    case "8":
+                                        manager.EditDormitoryManager();
+                                        break;
+                                    case "9":
+                                        manager.DeleteDormitoryManager();
+                                        break;
+                                    case "10":
+                                        manager.ShowDormitoryManagers();
+                                        break;
+                                    case "11":
+                                        manager.AddBlockManager();
+                                        break;
+                                    case "12":
+                                        manager.EditBlockManager();
+                                        break;
+                                    case "13":
+                                        manager.DeleteBlockManager();
+                                        break;
+                                    case "14":
+                                        manager.ShowBlockManagers();
+                                        break;
+                                    case "0":
+                                        backToMainMenu = true;
+                                        break;
                                     }
                                 }
                             break;
@@ -317,7 +311,7 @@ class Program
             else if (input == 2)
             {
                 Console.WriteLine("khoroj...");
-                return; // خروج از برنامه
+                return; // خروج از برنام
             }
         }
     }

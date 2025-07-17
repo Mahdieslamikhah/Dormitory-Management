@@ -142,7 +142,7 @@ namespace DormitoryManagement
                 Console.WriteLine("Daneshjoo yaft nashod.");
                 return;
             }
-
+            Console.ReadKey();
             var dorms = dormitoryManager.GetDormitoryList();
             if (dorms.Count == 0)
             {
