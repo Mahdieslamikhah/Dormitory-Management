@@ -24,12 +24,12 @@ namespace DormitoryManagement
             // بررسی اینکه آیا کاربر قبلاً ثبت‌نام کرده است
             if (users.Exists(u => u.Username == username))
             {
-                throw new Exception("این نام کاربری قبلاً ثبت‌نام شده است.");
+                throw new Exception("ghablan sabte nam kardid");
             }
 
             User newUser = new User(username, password, naghsh);
             users.Add(newUser);
-            Console.WriteLine("با موفقیت ثبت نام کردید! حالا وارد شوید ...");
+            Console.WriteLine(" >> Ba movafaghiyat sabt nam kardid..");
         }
 
         // بررسی وجود نام کاربری
