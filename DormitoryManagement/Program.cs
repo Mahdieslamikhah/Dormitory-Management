@@ -308,42 +308,30 @@ class Program
                             Console.WriteLine("khoroj...");
                             return; // خروج از برنامه
                         case "5":
-                            bool backToReportMenu = false;
-                            while (!backToReportMenu)
+                            bool backToMain = false;
+                            while (!backToMain)
                             {
                                 Console.Clear();
-                                Console.WriteLine("Menu Gozaresh ha");
-                                Console.WriteLine("1. Gozaresh Vasiyat Eskan");
-                                Console.WriteLine("2. Gozaresh Amval");
-                                Console.WriteLine("3. Gozaresh Haye takhasosi");
-                                Console.WriteLine("0. Bargasht be menu asli");
-                                Console.Write("Entekhab Shoma :");
-                                string reportInput = Console.ReadLine();
-                                switch (reportInput)
-                                {
-                                    case "1":
-                                        Console.WriteLine(">> Gozaresh Vasiyat Eskan...");
+                                Console.WriteLine("--- Menu-ye Gozaresh-giri ---");
+                                Console.WriteLine("\n-- Gozaresh-e Vaziat-e Eskan --");
+                                Console.WriteLine("1. Amar-e Kolli-e Eskan-e Daneshjooyan");
+                                Console.WriteLine("2. List-e Otagh-haye Khali va Por");
+                                Console.WriteLine("3. Zarfiat-e Baghimandeh-ye Har Khabgah va Block");
+                                Console.WriteLine("\n-- Gozaresh-e Amval --");
+                                Console.WriteLine("4. List-e Kamel-e Amval");
+                                Console.WriteLine("5. Amval-e Takhsis dadeh shodeh be har Otagh");
+                                Console.WriteLine("6. Amval-e Takhsis dadeh shodeh be har Daneshjoo");
+                                Console.WriteLine("7. Amval-e Mayoob va dar hal-e Tamir");
+                                Console.WriteLine("\n-- Gozaresh-haye Takhasosi --");
+                                Console.WriteLine("8. Gozaresh-e Darkhast-haye Tamirat");
+                                Console.WriteLine("9. Gozaresh-e Tarikhche-ye Eskan-e Daneshjooyan");
+                                Console.WriteLine("0. Bazgasht be Menu-ye Asli");
+                                Console.Write("\nEntekhab-e Shoma: ");
+                                string choice = Console.ReadLine();
+                                
 
-                                        break;
-                                    case "2":
-                                        Console.WriteLine(">> Gozaresh Amval...");
-
-                                        break;
-                                    case "3":
-                                        Console.WriteLine(">> Gozaresh Haye Takhasosi...");
-
-                                        break;
-                                    case "0":
-                                        backToReportMenu = true;
-                                        break;
-                                    default:
-                                        Console.WriteLine("gozine eshtebah ");
-                                        break;
-                                }
-                                Console.WriteLine("\nBaraye edame Enter Bezanid...");
-                                Console.ReadKey();
                             }
-                            break;
+                        
                     }
                 }
             }
@@ -352,6 +340,7 @@ class Program
                 Console.WriteLine("khoroj...");
                 return; // خروج از برنام
             }
+            ReportGenerator reportGenerator = new ReportGenerator(manager, khahbgah, amvalManager);
         }
     }
 }
