@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DormitoryManagement
 {
-    class ClassModiriyatAmval
+    public class ClassModiriyatAmval
     {
         private List<Tajhizat> tajhizatList;
         private ModiriyatAshkhas ashkhasManager;
@@ -103,6 +103,38 @@ namespace DormitoryManagement
         {
             return ashkhasManager.FindDaneshjooByNumber(daneshjoNumber);
         }
+        
+public void ShowAssetsByRoom(int roomNumber)
+{
+    // از فیلد tajhizatList که در کلاس شما وجود دارد استفاده می‌شود
+    var assetsInRoom = tajhizatList.Where(t => t.OtaghMarbote != null && t.OtaghMarbote.RoomNumber == roomNumber).ToList();
+    if (!assetsInRoom.Any())
+    {
+        Console.WriteLine($"هیچ تجهیزی برای اتاق شماره {roomNumber} یافت نشد.");
+        return;
+    }
+
+    foreach (var t in assetsInRoom)
+    {
+        Console.WriteLine($"شماره اموال: {t.ShomareAmval}, نوع: {t.NoeTajhizat}, وضعیت: {t.Status}");
+    }
+}
+
+public void ShowDefectiveAssets()
+{
+    // فرض می‌کنیم وضعیت‌های "Kharab" و "Dar Tamir" نشان‌دهنده اموال معیوب هستند
+    var defectiveAssets = tajhizatList.Where(t => t.Status.ToLower() == "kharab" || t.Status.ToLower() == "dar tamir").ToList();
+    if (!defectiveAssets.Any())
+    {
+        Console.WriteLine("هیچ تجهیز معیوب یا در حال تعمیری یافت نشد.");
+        return;
+    }
+
+    foreach (var t in defectiveAssets)
+    {
+        Console.WriteLine($"شماره اموال: {t.ShomareAmval}, نوع: {t.NoeTajhizat}, وضعیت: {t.Status}, اتاق: {t.OtaghMarbote?.RoomNumber}, دانشجو: {t.Malek?.Name}");
+    }
+}
 
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DormitoryManagement
 {
-    class UserManager
+     class UserManager
     {
         private List<User> users = new List<User>();
 

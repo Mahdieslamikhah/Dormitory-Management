@@ -182,7 +182,7 @@ namespace DormitoryManagement
             student.Otagh = otagh;
 
             student.Khabgah = selectedDorm;
-            student.Blook = selectedBlock; 
+            student.Blook = selectedBlock;
             otagh.DaneshjoosMarbote.Add(student);
 
             Console.WriteLine("Sabt naam anjam shod.");
@@ -404,6 +404,10 @@ namespace DormitoryManagement
         public Daneshjoo FindDaneshjooByNumber(int number)
         {
             return students.FirstOrDefault(d => d.Daneshjonumber == number);
+        }
+        public List<Daneshjoo> GetAllStudents()
+        {
+            return students;
         }
     }
 }
