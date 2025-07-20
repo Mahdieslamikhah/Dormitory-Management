@@ -110,13 +110,13 @@ public void ShowAssetsByRoom(int roomNumber)
     var assetsInRoom = tajhizatList.Where(t => t.OtaghMarbote != null && t.OtaghMarbote.RoomNumber == roomNumber).ToList();
     if (!assetsInRoom.Any())
     {
-        Console.WriteLine($"هیچ تجهیزی برای اتاق شماره {roomNumber} یافت نشد.");
+        Console.WriteLine($"tajhizi baraye shomare otagh {roomNumber} yaft nashod.");
         return;
     }
 
     foreach (var t in assetsInRoom)
     {
-        Console.WriteLine($"شماره اموال: {t.ShomareAmval}, نوع: {t.NoeTajhizat}, وضعیت: {t.Status}");
+        Console.WriteLine($"ShomareAmval: {t.ShomareAmval}, NoeTajhizat: {t.NoeTajhizat}, vaziat: {t.Status}");
     }
 }
 
@@ -132,7 +132,7 @@ public void ShowDefectiveAssets()
 
     foreach (var t in defectiveAssets)
     {
-        Console.WriteLine($"شماره اموال: {t.ShomareAmval}, نوع: {t.NoeTajhizat}, وضعیت: {t.Status}, اتاق: {t.OtaghMarbote?.RoomNumber}, دانشجو: {t.Malek?.Name}");
+        Console.WriteLine($"ShomareAmval: {t.ShomareAmval}, NoeTajhizat: {t.NoeTajhizat}, vaziat: {t.Status}, otagh: {t.OtaghMarbote?.RoomNumber}, Daneshjoo: {t.Malek?.Name}");
     }
 }
 
