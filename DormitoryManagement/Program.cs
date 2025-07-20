@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Security.AccessControl;
 using DormitoryManagement;
 
 class Program
@@ -113,6 +114,7 @@ class Program
                     Console.WriteLine("2. Modriyat Block");
                     Console.WriteLine("3. Modriyat Ashkhas");
                     Console.WriteLine("4. Modriyat Amval");
+                    Console.WriteLine("5. Gozaresh Giri");
                     Console.WriteLine("0. khoroj");
                     string input2 = Console.ReadLine();
 
@@ -255,8 +257,8 @@ class Program
                                     case "0":
                                         backToMainMenu = true;
                                         break;
-                                    }
                                 }
+                            }
                             break;
                         case "4":
                             bool returnToMainMenu = false;
@@ -301,10 +303,47 @@ class Program
                             Console.WriteLine("\nBaraye edame kelidi bezanid...");
                             Console.ReadKey();
                             break;
-                            
+
                         case "0":
                             Console.WriteLine("khoroj...");
                             return; // خروج از برنامه
+                        case "5":
+                            bool backToReportMenu = false;
+                            while (!backToReportMenu)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Menu Gozaresh ha");
+                                Console.WriteLine("1. Gozaresh Vasiyat Eskan");
+                                Console.WriteLine("2. Gozaresh Amval");
+                                Console.WriteLine("3. Gozaresh Haye takhasosi");
+                                Console.WriteLine("0. Bargasht be menu asli");
+                                Console.Write("Entekhab Shoma :");
+                                string reportInput = Console.ReadLine();
+                                switch (reportInput)
+                                {
+                                    case "1":
+                                        Console.WriteLine(">> Gozaresh Vasiyat Eskan...");
+
+                                        break;
+                                    case "2":
+                                        Console.WriteLine(">> Gozaresh Amval...");
+
+                                        break;
+                                    case "3":
+                                        Console.WriteLine(">> Gozaresh Haye Takhasosi...");
+
+                                        break;
+                                    case "0":
+                                        backToReportMenu = true;
+                                        break;
+                                    default:
+                                        Console.WriteLine("gozine eshtebah ");
+                                        break;
+                                }
+                                Console.WriteLine("\nBaraye edame Enter Bezanid...");
+                                Console.ReadKey();
+                            }
+                            break;
                     }
                 }
             }
