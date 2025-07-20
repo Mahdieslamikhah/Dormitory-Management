@@ -62,7 +62,7 @@ class Program
                             string password = Console.ReadLine();
 
                             // نمایش منوی انتخاب نقش
-                            Console.WriteLine("Naghshe Shoma : ");
+                            Console.WriteLine(">> Naghshe Shoma : ");
                             Console.WriteLine("1.Masol Khabgah");
                             Console.WriteLine("2.Masol Blook");
                             Console.WriteLine("3.Daneshjoo");

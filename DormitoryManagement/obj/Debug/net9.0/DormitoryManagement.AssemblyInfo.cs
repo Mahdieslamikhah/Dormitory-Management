@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DormitoryManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df4c01fb622848fc7e7ce76debf2f94e16d77145")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d363614ff7ff1ec0c58ca72539c9a2828d3a5e2d")]
+>>>>>>> bcd5407fe8cf318ca5ef0c637b6ca24a7e2647f9
 [assembly: System.Reflection.AssemblyProductAttribute("DormitoryManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DormitoryManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
