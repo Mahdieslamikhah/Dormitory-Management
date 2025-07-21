@@ -3,7 +3,7 @@ namespace DormitoryManagement {
 public class Tajhizat
 {
     public string NoeTajhizat { get; set; }
-    public int PartNumber { get; set; } // 001-005
+    public int PartNumber { get; set; } 
     public string ShomareAmval { get; set; }
     public string Status { get; set; }
     public Otagh OtaghMarbote { get; set; }
@@ -16,7 +16,7 @@ public class Tajhizat
             Status = status;
             Malek = malek;
             OtaghMarbote = otaghMarbote;
-            ShomareAmval = SakhtPartNumber(partNumber); // ساخت شماره اموال 
+            ShomareAmval = SakhtPartNumber(partNumber); 
 
         }
     private string SakhtPartNumber(int PartNumber)
@@ -25,8 +25,8 @@ public class Tajhizat
             {
                 throw new Exception("Part Number Bayad bein 001 ta 005 bashad !");
             }
-            string pishVand = PartNumber.ToString("D3"); // سه رقم ثابت که نوع تجهیز رو مشخص میکنه 
-            string pasVand = new Random().Next(100000, 999999).ToString(); // تولید رقم تصادفی
+            string pishVand = PartNumber.ToString("D3"); 
+            string pasVand = new Random().Next(100000, 999999).ToString(); 
             return pishVand + pasVand;
         }
 

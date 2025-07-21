@@ -83,7 +83,7 @@ class Program
                                     break;
                                 default:
                                     Console.WriteLine("نقش نامعتبر است. به عنوان دانشجو ثبت‌نام می‌کنید.");
-                                    role = "دانشجو"; // پیش‌فرض
+                                    role = "دانشجو"; 
                                     break;
                             }
 

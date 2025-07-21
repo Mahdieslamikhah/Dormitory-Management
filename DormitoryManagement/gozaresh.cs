@@ -53,14 +53,14 @@ namespace DormitoryManagement
 
                 foreach (var block in dorm.Blookha)
                 {
-                    Console.WriteLine($"  ## Block: {block.BlockName}"); // Corrected based on blook.cs file
-                    if (block.Rooms == null || !block.Rooms.Any()) // Corrected based on blook.cs file
+                    Console.WriteLine($"  ## Block: {block.BlockName}");
+                    if (block.Rooms == null || !block.Rooms.Any()) 
                     {
                         Console.WriteLine("in block hich otaghi nadarad.");
                         continue;
                     }
                     
-                    foreach (var room in block.Rooms) // Corrected
+                    foreach (var room in block.Rooms) 
                     {
                         string status = room.DaneshjoosMarbote.Count == 0 ? "khali" : $"{room.DaneshjoosMarbote.Count} nafar az {room.Capacity} nafar";
                         Console.WriteLine($"    - otaghe shomareh {room.RoomNumber} | Vaziat: {status}");

@@ -16,12 +16,12 @@ namespace DormitoryManagement
                     return user;
                 }
             }
-            return null; // یوزر نبود 
+            return null; 
         }
 
-        public void Register(string username, string password, string naghsh) // تغییر نام به Register
+        public void Register(string username, string password, string naghsh) 
         {
-            // بررسی اینکه آیا کاربر قبلاً ثبت‌نام کرده است
+            
             if (users.Exists(u => u.Username == username))
             {
                 throw new Exception("ghablan sabte nam kardid");
@@ -32,7 +32,7 @@ namespace DormitoryManagement
             Console.WriteLine(" >> Ba movafaghiyat sabt nam kardid..");
         }
 
-        // بررسی وجود نام کاربری
+        
         public bool UserExists(string username)
         {
             return users.Exists(u => u.Username == username);
