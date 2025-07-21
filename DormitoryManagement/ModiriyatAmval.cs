@@ -31,7 +31,7 @@ namespace DormitoryManagement
             Console.WriteLine("Shomare Daneshjoo:");
             int daneshjoNumber = int.Parse(Console.ReadLine());
 
-            // Namayesh ya jostejoo daneshjoo dar list
+            
             var malek = FindDaneshjoo(daneshjoNumber);
             if (malek == null)
             {
@@ -106,7 +106,7 @@ namespace DormitoryManagement
         
 public void ShowAssetsByRoom(int roomNumber)
 {
-    // از فیلد tajhizatList که در کلاس شما وجود دارد استفاده می‌شود
+    
     var assetsInRoom = tajhizatList.Where(t => t.OtaghMarbote != null && t.OtaghMarbote.RoomNumber == roomNumber).ToList();
     if (!assetsInRoom.Any())
     {
@@ -122,7 +122,7 @@ public void ShowAssetsByRoom(int roomNumber)
 
 public void ShowDefectiveAssets()
 {
-    // فرض می‌کنیم وضعیت‌های "Kharab" و "Dar Tamir" نشان‌دهنده اموال معیوب هستند
+   
     var defectiveAssets = tajhizatList.Where(t => t.Status.ToLower() == "kharab" || t.Status.ToLower() == "dar tamir").ToList();
     if (!defectiveAssets.Any())
     {

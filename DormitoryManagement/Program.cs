@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Security.AccessControl;
-using DormitoryManagement; // مطمئن شوید که فضای نام ReportGenerator در اینجا نیز باشد
+using DormitoryManagement; 
 
 class Program
 {
@@ -14,7 +14,7 @@ class Program
         ModiriyatAshkhas manager = new ModiriyatAshkhas(sharedBlockManager, khahbgah);
         ClassModiriyatAmval amvalManager = new ClassModiriyatAmval(manager);
         
-        // ایجاد نمونه ReportGenerator در اینجا
+        
         ReportGenerator reportGenerator = new ReportGenerator(manager, khahbgah, amvalManager);
 
         while (true)
@@ -27,7 +27,7 @@ class Program
             int input = int.Parse(Console.ReadLine());
             if (input == 1)
             {
-                // اگر کاربر فعلی وجود دارد، به منوی اصلی بروید
+            
                 if (currentUser != null)
                 {
                     Console.WriteLine($"Welcome {currentUser.Username}");
@@ -40,15 +40,15 @@ class Program
                     {
                         Console.Write("Password : ");
                         string password = Console.ReadLine();
-                        currentUser = userManager.Login(username, password); // ورود کاربر
+                        currentUser = userManager.Login(username, password); 
                         if (currentUser != null)
                         {
                             Console.WriteLine($"Welcome {currentUser.Username}");
                         }
                         else
                         {
-                            Console.WriteLine("نام کاربری یا رمز عبور اشتباه است.");
-                            continue; // بازگشت به حلقه اصلی
+                            Console.WriteLine("name karbari ya pass eshtebahe...");
+                            continue; 
                         }
                     }
                     else
@@ -56,12 +56,12 @@ class Program
                         Console.WriteLine("User vojod nadard jahate sabte nam 1 ra vared konid : ");
                         string answer = Console.ReadLine();
 
-                        if (answer == "1") // ثبت‌نام
+                        if (answer == "1") 
                         {
                             Console.Write("Password : ");
                             string password = Console.ReadLine();
 
-                            // نمایش منوی انتخاب نقش
+                            
                             Console.WriteLine(">> Naghshe Shoma : ");
                             Console.WriteLine("1.Masol Khabgah");
                             Console.WriteLine("2.Masol Blook");
@@ -69,7 +69,7 @@ class Program
                             string naghshChoice = Console.ReadLine();
                             string role = "";
 
-                            // تعیین نقش بر اساس ورودی کاربر
+                            
                             switch (naghshChoice)
                             {
                                 case "1":
@@ -83,15 +83,15 @@ class Program
                                     break;
                                 default:
                                     Console.WriteLine("نقش نامعتبر است. به عنوان دانشجو ثبت‌نام می‌کنید.");
-                                    role = "دانشجو"; // پیش‌فرض
+                                    role = "دانشجو"; 
                                     break;
                             }
 
                             try
                             {
                                 userManager.Register(username, password, role);
-                                // کاربر جدید ثبت‌نام شده را به عنوان کاربر فعلی تنظیم کنید
-                                currentUser = new User(username, password, role); // فرض می‌کنیم که کلاس User سازنده‌ای دارد
+                                
+                                currentUser = new User(username, password, role); 
                                 Console.WriteLine($"Sabte Nam Movafagh Bod !{currentUser.Username}");
                             }
                             catch (Exception ex)
@@ -101,24 +101,24 @@ class Program
                         }
                         else if (answer == "2")
                         {
-                            Console.WriteLine("شما از ثبت‌نام صرف‌نظر کردید.");
+                            Console.WriteLine("shoma sarfe nazar kardin..");
                         }
                         else
                         {
-                            Console.WriteLine("گزینه نامعتبر است.");
+                            Console.WriteLine("opsss....");
                         }
                     }
                 }
-                // حلقه منوی اصلی برنامه
+                
                 while (true)
                 {
-                    Console.Clear(); // پاک کردن صفحه برای نمایش منوی اصلی
-                    Console.WriteLine($"Menu Asli - User: {currentUser?.Username ?? "Guest"}"); // نمایش نام کاربر یا مهمان
+                    Console.Clear();
+                    Console.WriteLine($"Menu Asli - User: {currentUser?.Username ?? "Guest"}"); 
                     Console.WriteLine("1. Modriyat Khabgah");
                     Console.WriteLine("2. Modriyat Block");
                     Console.WriteLine("3. Modriyat Ashkhas");
                     Console.WriteLine("4. Modriyat Amval");
-                    Console.WriteLine("5. Gozaresh Giri"); // منوی گزارش
+                    Console.WriteLine("5. Gozaresh Giri"); 
                     Console.WriteLine("0. Khoroj");
                     Console.Write("Entekhab Shoma: ");
                     string input2 = Console.ReadLine();
@@ -126,7 +126,7 @@ class Program
                     switch (input2)
                     {
                         case "1":
-                            // مدیریت خوابگاه
+                            
                             while (true)
                             {
                                 Console.Clear();
@@ -156,15 +156,15 @@ class Program
                                         break;
                                 }
                                 Console.WriteLine("\nBaraye edame ENTER bezanid...");
-                                Console.ReadKey(); // انتظار برای ادامه
+                                Console.ReadKey(); 
                             }
                             break;
                         case "2":
-                            // مدیریت بلاک
+                            
                             bool runningBlock = true;
                             while (runningBlock)
                             {
-                                Console.Clear(); // پاک کردن صفحه برای منوی بلاک
+                                Console.Clear(); 
                                 Console.WriteLine("Menu Modiriyat Block");
                                 Console.WriteLine("1. Add blook");
                                 Console.WriteLine("2. Hazf blook");
@@ -194,11 +194,11 @@ class Program
                                         break;
                                 }
                                 Console.WriteLine("\nBaraye edame ENTER bezanid...");
-                                Console.ReadKey(); // انتظار برای ادامه
+                                Console.ReadKey();
                             }
                             break;
                         case "3":
-                            // مدیریت اشخاص (دانشجو و مسئولین)
+                            
                             bool backToMainMenuAshkhas = false;
                             while (!backToMainMenuAshkhas)
                             {
@@ -218,12 +218,12 @@ class Program
                                 Console.WriteLine("12. Virayesh masoul block");
                                 Console.WriteLine("13. Hazf masoul block");
                                 Console.WriteLine("14. Namayesh masoulan block");
-                                Console.WriteLine("0. Khorooj az in menu"); // تغییر متن برای بازگشت به منوی اصلی
+                                Console.WriteLine("0. Khorooj az in menu");
                                 Console.Write("Entekhab shoma: ");
 
                                 string choiceAshkhas = Console.ReadLine();
 
-                                Console.Clear(); // پاک کردن صفحه بعد از دریافت ورودی
+                                Console.Clear(); 
                                 switch (choiceAshkhas)
                                 {
                                     case "1":
@@ -269,13 +269,13 @@ class Program
                                         manager.ShowBlockManagers();
                                         break;
                                     case "0":
-                                        backToMainMenuAshkhas = true; // خروج از حلقه مدیریت اشخاص
+                                        backToMainMenuAshkhas = true; 
                                         break;
                                     default:
                                         Console.WriteLine("Gozine na motabar.");
                                         break;
                                 }
-                                if (!backToMainMenuAshkhas) // اگر از حلقه خارج نشده‌ایم، منتظر کلید باش
+                                if (!backToMainMenuAshkhas) 
                                 {
                                     Console.WriteLine("\nBaraye edame ENTER bezanid...");
                                     Console.ReadKey(); 
@@ -283,7 +283,7 @@ class Program
                             }
                             break;
                         case "4":
-                            // مدیریت اموال
+                            
                             bool returnToMainMenuAmval = false;
                             while (!returnToMainMenuAmval)
                             {
@@ -293,8 +293,8 @@ class Program
                                 Console.WriteLine("2. Namayesh hame Tajhizat");
                                 Console.WriteLine("3. Hazf Tajhizat");
                                 Console.WriteLine("4. Jostejoo bar asas shomare daneshjoo");
-                                Console.WriteLine("5. Namayesh amval dar har otagh"); // اضافه شده
-                                Console.WriteLine("6. Namayesh amval mayoob va dar hale tamir"); // اضافه شده
+                                Console.WriteLine("5. Namayesh amval dar har otagh");
+                                Console.WriteLine("6. Namayesh amval mayoob va dar hale tamir"); 
                                 Console.WriteLine("0. Bargasht be Menu Asli");
 
                                 Console.Write("Entekhab shoma: ");
@@ -315,7 +315,7 @@ class Program
                                         amvalManager.SearchByStudentNumber();
                                         break;
                                     case "5":
-                                        // نیاز به ورودی شماره اتاق برای این تابع
+                                       
                                         Console.Write("Lotfan shomareh otaghe mored nazar ra vared konid: ");
                                         if(int.TryParse(Console.ReadLine(), out int roomNum))
                                         {
@@ -334,7 +334,7 @@ class Program
                                         Console.WriteLine("Gozine na motabar.");
                                         break;
                                 }
-                                if (!returnToMainMenuAmval) // اگر از حلقه خارج نشده‌ایم، منتظر کلید باش
+                                if (!returnToMainMenuAmval) 
                                 {
                                     Console.WriteLine("\nBaraye edame ENTER bezanid...");
                                     Console.ReadKey();
@@ -342,7 +342,7 @@ class Program
                             }
                             break;
 
-                        // منوی گزارش گیری
+                        
                         case "5":
                             bool backToMain = false;
                             while (!backToMain)
@@ -395,14 +395,14 @@ class Program
                                         reportGenerator.ShowStudentAccommodationHistory();
                                         break;
                                     case "0":
-                                        backToMain = true; // خروج از حلقه منوی گزارش
+                                        backToMain = true; 
                                         break;
                                     default:
                                         Console.WriteLine("Gozine na motabar.");
                                         break;
                                 }
 
-                                if (!backToMain) // اگر از حلقه خارج نشده‌ایم، منتظر کلید باش
+                                if (!backToMain) 
                                 {
                                     Console.WriteLine("\nBaraye edame ENTER bezanid...");
                                     Console.ReadKey();
@@ -412,12 +412,12 @@ class Program
 
                         case "0":
                             Console.WriteLine("khoroj...");
-                            return; // خروج از برنامه
+                            return; 
                         default:
                             Console.WriteLine("Gozine na motabar. Lotfan dobare talash konid.");
                             break;
                     }
-                    // بعد از انتخاب هر گزینه اصلی (غیر از خروج)، دوباره منتظر کلید بمانید تا منوی اصلی دوباره نمایش داده شود
+                   
                     if (input2 != "0")
                     {
                         Console.WriteLine("\nBaraye bazgasht be Menu Asli ENTER bezanid...");
@@ -428,31 +428,8 @@ class Program
             else if (input == 2)
             {
                 Console.WriteLine("khoroj...");
-                return; // خروج از برنام
+                return; 
             }
         }
     }
 }
-
-// برای اینکه کد بالا کامپایل شود، نیاز به کلاس‌های User، UserManager، ModiriyatAshkhas، ModriyatKhahbgah، ClassModiriyatBlook و ClassModiriyatAmval داریم.
-// اگر این کلاس‌ها را ندارید، لطفاً آنها را نیز ارسال کنید.
-
-// فرض بر این است که کلاس User دارای سازنده‌ای مشابه زیر است:
-/*
-public class User
-{
-    public string Username { get; }
-    public string Password { get; } // معمولا رمز عبور به صورت هش شده ذخیره می‌شود
-    public string Role { get; }
-
-    public User(string username, string password, string role)
-    {
-        Username = username;
-        Password = password;
-        Role = role;
-    }
-}
-*/
-
-// فرض بر این است که کلاس UserManager دارای متدهای UserExists، Login و Register است.
-// و کلاس‌های ModiriyatAshkhas، ModriyatKhahbgah، ClassModiriyatBlook و ClassModiriyatAmval نیز متدهای مورد نیاز را دارند.

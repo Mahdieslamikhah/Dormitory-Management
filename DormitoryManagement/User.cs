@@ -5,7 +5,7 @@ namespace DormitoryManagement
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Naghsh { get; set; }// نقش های طبق فایل پروژّ 
+        public string Naghsh { get; set; }
         public User(string username, string password, string naghsh)
     {
         Username = username;
