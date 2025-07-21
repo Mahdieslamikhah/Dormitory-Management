@@ -24,13 +24,12 @@ namespace DormitoryManagement
             Masoulkhabgah = masoulkhabgah;
             Blookha = blookha;
         }
-        public Khabgah() { }
         public Khabgah(string namekhabgah, string adress, int zarfiyatkol, Masoulkhabgah masoulkhabgah)
         {
-            Namekhabgah = namekhabgah;
-            Adress = adress;
-            Zarfiyatkol = zarfiyatkol;
-            Masoulkhabgah = masoulkhabgah;
+          Namekhabgah = namekhabgah;
+          Adress = adress;
+          Zarfiyatkol = zarfiyatkol;
+          Masoulkhabgah = masoulkhabgah;
         }
         
     }
