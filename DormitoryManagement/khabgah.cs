@@ -31,6 +31,6 @@ namespace DormitoryManagement
           Zarfiyatkol = zarfiyatkol;
           Masoulkhabgah = masoulkhabgah;
         }
-        
+        public Khabgah() { }
     }
 }

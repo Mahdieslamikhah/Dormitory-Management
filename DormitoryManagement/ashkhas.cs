@@ -58,7 +58,7 @@ namespace DormitoryManagement
             Console.WriteLine("Adres:");
             string address = Console.ReadLine();
 
-            selectedDorm.Masoulkhabgah = new Masoulkhabgah(name, lastname, nationalCode, phone, address, "Masoul Khabgah", selectedDorm.Namekhabgah);
+            selectedDorm.Masoulkhabgah = new Masoulkhabgah(name, lastname, nationalCode, phone, address,"Masoul Khabgah", selectedDorm.Namekhabgah);
 
             Console.WriteLine("Masoul khabgah ba movafaghiat afzode shod.");
         }
