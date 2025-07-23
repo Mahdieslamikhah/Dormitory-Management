@@ -12,6 +12,14 @@ public class ClassModiriyatBlook
     {
         this.dormManager = dormManager;
     }
+    private ModiriyatAshkhas ashkhasManager;
+
+    public ClassModiriyatBlook(ModriyatKhahbgah dormManager, ModiriyatAshkhas ashkhasManager)
+    {
+        this.dormManager = dormManager;
+        this.ashkhasManager = ashkhasManager;
+    }
+
 
     public ClassModiriyatBlook() { }
 
@@ -29,9 +37,7 @@ public class ClassModiriyatBlook
         Console.WriteLine("List khabgah-ha:");
         var dormitories = dormManager.GetDormitoryList();
         for (int i = 0; i < dormitories.Count; i++)
-        {
             Console.WriteLine($"{i + 1}. {dormitories[i].Namekhabgah}");
-        }
 
         Console.WriteLine("Lotfan shomare khabgah ra entekhab konid:");
         int selectedIndex = int.Parse(Console.ReadLine()) - 1;
@@ -44,14 +50,34 @@ public class ClassModiriyatBlook
 
         string dormitoryName = dormitories[selectedIndex].Namekhabgah;
 
-        Console.WriteLine("Name masoul block ra vared konid:");
-        string managerName = Console.ReadLine();
-
         if (blocks.Any(b => b.BlockName == name && b.DormitoryName == dormitoryName))
         {
             Console.WriteLine("Block ba in name dar in khabgah ghablan sabt shode.\n");
             return;
         }
+        var students = ashkhasManager.GetAllStudents();
+        if (students.Count == 0)
+        {
+            Console.WriteLine("Hich daneshjooei sabt nashode ast.");
+            return;
+        }
+
+        Console.WriteLine("List daneshjooyan:");
+        for (int i = 0; i < students.Count; i++)
+        {
+            var s = students[i];
+            Console.WriteLine($"{i + 1}. {s.Name} {s.Lastname} - {s.Daneshjonumber}");
+        }
+
+        Console.WriteLine("Shomare daneshjoo ra baraye masoul entekhab konid:");
+        int stuIndex = int.Parse(Console.ReadLine()) - 1;
+        if (stuIndex < 0 || stuIndex >= students.Count)
+        {
+            Console.WriteLine("Entekhab namotabar.");
+            return;
+        }
+
+        var selected = students[stuIndex];
 
         blocks.Add(new Blook
         {
@@ -59,7 +85,9 @@ public class ClassModiriyatBlook
             DormitoryName = dormitoryName,
             NumberOfFloors = floors,
             NumberOfRooms = rooms,
-            BlockManager = new Masoulblook { Name = managerName }
+            BlockManager = new Masoulblook("Masoul Block", name, selected.Daneshjonumber,
+                selected.Otagh, selected.Blook, selected.Khabgah, selected.Tajhizat,
+                selected.Name, selected.Lastname, selected.Nationalnumber, selected.Phonenumber, selected.Adress)
         });
 
         Console.WriteLine($"Block '{name}' baraye khabgah '{dormitoryName}' ba movafaghiat ezafe shod.\n");
@@ -85,19 +113,49 @@ public class ClassModiriyatBlook
             Console.WriteLine("Tedad otagh jadid:");
             block.NumberOfRooms = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Name masoul jadid:");
-            block.BlockManager.Name = Console.ReadLine();
+            Console.WriteLine("Aya mikhahid masoul block ra taghir dahid? (y/n)");
+            if (Console.ReadLine().ToLower() == "y")
+            {
+                var students = ashkhasManager.GetAllStudents();
+                if (students.Count == 0)
+                {
+                    Console.WriteLine("Hich daneshjooei vojood nadarad.");
+                    return;
+                }
+
+                Console.WriteLine("List daneshjooyan:");
+                for (int i = 0; i < students.Count; i++)
+                {
+                    var s = students[i];
+                    Console.WriteLine($"{i + 1}. {s.Name} {s.Lastname} - {s.Daneshjonumber}");
+                }
+
+                Console.WriteLine("Shomare daneshjoo ra entekhab konid:");
+                int stuIndex = int.Parse(Console.ReadLine()) - 1;
+                if (stuIndex < 0 || stuIndex >= students.Count)
+                {
+                    Console.WriteLine("Entekhab namotabar.");
+                    return;
+                }
+
+                var selected = students[stuIndex];
+
+                block.BlockManager = new Masoulblook("Masoul Block", block.BlockName, selected.Daneshjonumber,
+                    selected.Otagh, selected.Blook, selected.Khabgah, selected.Tajhizat,
+                    selected.Name, selected.Lastname, selected.Nationalnumber, selected.Phonenumber, selected.Adress);
+            }
 
             Console.WriteLine("Name jadid khabgah:");
             block.DormitoryName = Console.ReadLine();
 
-            Console.WriteLine("Etela'at block update shod.\n");
+            Console.WriteLine("Etela'at block ba movafaghiat virayesh shod.\n");
         }
         else
         {
             Console.WriteLine("Block peyda nashod.\n");
         }
     }
+
 
     public void RemoveBlock()
     {
