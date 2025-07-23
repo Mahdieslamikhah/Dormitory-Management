@@ -12,6 +12,7 @@ class Program
         User currentUser = null; 
         ClassModiriyatBlook sharedBlockManager = new ClassModiriyatBlook(khahbgah);
         ModiriyatAshkhas manager = new ModiriyatAshkhas(sharedBlockManager, khahbgah);
+        sharedBlockManager.AshkhasManager = manager;
         ClassModiriyatAmval amvalManager = new ClassModiriyatAmval(manager);
         
         

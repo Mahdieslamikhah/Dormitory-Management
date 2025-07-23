@@ -7,7 +7,6 @@ public class ClassModiriyatBlook
 {
     private List<Blook> blocks = new List<Blook>();
     private ModriyatKhahbgah dormManager;
-
     public ClassModiriyatBlook(ModriyatKhahbgah dormManager)
     {
         this.dormManager = dormManager;
@@ -18,6 +17,14 @@ public class ClassModiriyatBlook
     {
         this.dormManager = dormManager;
         this.ashkhasManager = ashkhasManager;
+    }
+    public ClassModiriyatBlook(ModiriyatAshkhas ashkhasManager)
+    {
+        this.ashkhasManager = ashkhasManager;
+    }
+    public ModiriyatAshkhas AshkhasManager
+    {
+        set { ashkhasManager = value; }
     }
 
 

@@ -222,7 +222,7 @@ namespace DormitoryManagement
                 return;
             }
 
-            Console.WriteLine("Masoul faeli:");
+            Console.WriteLine("Masoul feli:");
             Console.WriteLine(block.BlockManager != null ? $"{block.BlockManager.Name}" : "Masouli sabt nashode.");
 
             Console.WriteLine("Aya mikhahid taghir dahid? (y/n)");
