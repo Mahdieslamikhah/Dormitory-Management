@@ -23,6 +23,11 @@ namespace DormitoryManagement
             string noetajhizat = Console.ReadLine();
 
             Console.WriteLine("Part Number (001-005):");
+            Console.WriteLine(" >> takht : 001");
+            Console.WriteLine(" >> miz : 002");
+            Console.WriteLine(" >> sandali : 003");
+            Console.WriteLine(" >> komod : 004");
+            Console.WriteLine(" >> yakhchal : 005");
             int partNumber = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Vaziat (Jadid, Kharab, Dar Estefade):");
