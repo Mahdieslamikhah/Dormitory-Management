@@ -126,7 +126,7 @@ public void ShowDefectiveAssets()
     var defectiveAssets = tajhizatList.Where(t => t.Status.ToLower() == "kharab" || t.Status.ToLower() == "dar tamir").ToList();
     if (!defectiveAssets.Any())
     {
-        Console.WriteLine("هیچ تجهیز معیوب یا در حال تعمیری یافت نشد.");
+        Console.WriteLine("tajhiz mayoubi yaft nashod. ");
         return;
     }
 
