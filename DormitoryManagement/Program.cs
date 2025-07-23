@@ -20,9 +20,11 @@ class Program
 
         while (true)
         {
+            Console.Clear();
             Console.WriteLine();
-            Console.WriteLine("Welcome To Dormitory Management..");
+            Console.WriteLine(" >> Welcome To Dormitory Management..");
             Console.WriteLine();
+            Console.WriteLine("Lotfan yek item ro Entekhab Konid : ");
             Console.WriteLine("1. Signup / Signin");
             Console.WriteLine("2. Exit");
             int input = int.Parse(Console.ReadLine());
@@ -131,7 +133,7 @@ class Program
                             while (true)
                             {
                                 Console.Clear();
-                                Console.WriteLine("Menu Khabgah");
+                                Console.WriteLine(" >> Menu Khabgah");
                                 Console.WriteLine("1. Afzodan Khabgah");
                                 Console.WriteLine("2. Virayesh Khabgah");
                                 Console.WriteLine("3. Hazfe Khabgah");
@@ -166,7 +168,7 @@ class Program
                             while (runningBlock)
                             {
                                 Console.Clear(); 
-                                Console.WriteLine("Menu Modiriyat Block");
+                                Console.WriteLine(" >> Menu Modiriyat Block");
                                 Console.WriteLine("1. Add blook");
                                 Console.WriteLine("2. Hazf blook");
                                 Console.WriteLine("3. Virayesh blook");
@@ -204,7 +206,7 @@ class Program
                             while (!backToMainMenuAshkhas)
                             {
                                 Console.Clear();
-                                Console.WriteLine("Menu Modiriyat Ashkhas");
+                                Console.WriteLine(" >> Menu Modiriyat Ashkhas");
                                 Console.WriteLine("1. Ezafe kardan daneshjoo");
                                 Console.WriteLine("2. Namayesh daneshjooyan");
                                 Console.WriteLine("3. Virayesh daneshjoo");
