@@ -133,6 +133,7 @@ namespace DormitoryManagement
         }
         public void RegisterStudentInDorm()
         {
+            Console.WriteLine("lotfan Enter Bezanid..");
             ShowStudents();
             Console.WriteLine("Shomare daneshjoo ra vared konid:");
             int id = int.Parse(Console.ReadLine());

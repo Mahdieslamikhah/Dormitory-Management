@@ -85,8 +85,8 @@ class Program
                                     role = "Daneshjoo";
                                     break;
                                 default:
-                                    Console.WriteLine("نقش نامعتبر است. به عنوان دانشجو ثبت‌نام می‌کنید.");
-                                    role = "دانشجو"; 
+                                    Console.WriteLine("eshtebah...");
+                                    role = "daneshjoo"; 
                                     break;
                             }
 
