@@ -345,71 +345,63 @@ class Program
 
                         
                         case "5":
-                            bool backToMain = false;
-                            while (!backToMain)
-                            {
-                                Console.Clear();
-                                Console.WriteLine("--- Menu-ye Gozaresh-giri ---");
-                                Console.WriteLine("\n-- Gozaresh-e Vaziat-e Eskan --");
-                                Console.WriteLine("1. Amar-e Kolli-e Eskan-e Daneshjooyan");
-                                Console.WriteLine("2. List-e Otagh-haye Khali va Por");
-                                Console.WriteLine("3. Zarfiat-e Baghimandeh-ye Har Khabgah va Block");
-                                Console.WriteLine("\n-- Gozaresh-e Amval --");
-                                Console.WriteLine("4. List-e Kamel-e Amval");
-                                Console.WriteLine("5. Amval-e Takhsis dadeh shodeh be har Otagh");
-                                Console.WriteLine("6. Amval-e Takhsis dadeh shodeh be har Daneshjoo");
-                                Console.WriteLine("7. Amval-e Mayoob va dar hal-e Tamir");
-                                Console.WriteLine("\n-- Gozaresh-haye Takhasosi --");
-                                Console.WriteLine("8. Gozaresh-e Darkhast-haye Tamirat");
-                                Console.WriteLine("9. Gozaresh-e Tarikhche-ye Eskan-e Daneshjooyan");
-                                Console.WriteLine("0. Bazgasht be Menu-ye Asli");
-                                Console.Write("\nEntekhab-e Shoma: ");
-                                string choiceGozaresh = Console.ReadLine();
+                        bool backToMain = false;
+                        while (!backToMain)
+                        {
+                             Console.Clear();
+                             Console.WriteLine("--- Menu-ye Gozaresh-giri ---");
+                             Console.WriteLine("\n-- Gozaresh-e Vaziat-e Eskan --");
+                             Console.WriteLine("1. Amar-e Kolli-e Eskan-e Daneshjooyan");
+                             Console.WriteLine("\n-- Gozaresh-e Amval --");
+                             Console.WriteLine("2. List-e Kamel-e Amval"); // شماره 2
+                             Console.WriteLine("3. Amval-e Takhsis dadeh shodeh be har Otagh"); // شماره 3
+                             Console.WriteLine("4. Amval-e Takhsis dadeh shodeh be har Daneshjoo"); // شماره 4
+                             Console.WriteLine("5. Amval-e Mayoob va dar hal-e Tamir"); // شماره 5
+                             Console.WriteLine("\n-- Gozaresh-haye Takhasosi --");
+                             Console.WriteLine("6. Gozaresh-e Darkhast-haye Tamirat"); // شماره 6
+                             Console.WriteLine("7. Gozaresh-e Tarikhche-ye Eskan-e Daneshjooyan"); // شماره 7
+                             Console.WriteLine("0. Bazgasht be Menu-ye Asli"); // شماره 0
+                             Console.Write("\nEntekhab-e Shoma: ");
+                      string choiceGozaresh = Console.ReadLine();
 
-                                switch (choiceGozaresh)
-                                {
-                                    case "1":
-                                        reportGenerator.ShowOverallAccommodationStats();
-                                        break;
-                                    case "2":
-                                        reportGenerator.ShowRoomOccupancyList();
-                                        break;
-                                    case "3":
-                                        reportGenerator.ShowDormAndBlockCapacity();
-                                        break;
-                                    case "4":
-                                        reportGenerator.ShowFullAssetList();
-                                        break;
-                                    case "5":
-                                        reportGenerator.ShowAssetsByRoom();
-                                        break;
-                                    case "6":
-                                        reportGenerator.ShowAssetsByStudent();
-                                        break;
-                                    case "7":
-                                        reportGenerator.ShowDefectiveAssets();
-                                        break;
-                                    case "8":
-                                        reportGenerator.ShowRepairRequestsReport();
-                                        break;
-                                    case "9":
-                                        reportGenerator.ShowStudentAccommodationHistory();
-                                        break;
-                                    case "0":
-                                        backToMain = true; 
-                                        break;
-                                    default:
-                                        Console.WriteLine("Gozine na motabar.");
-                                        break;
-                                }
+                     switch (choiceGozaresh)
+                     {
+                         case "1":
+                         reportGenerator.ShowOverallAccommodationStats();
+                         break;
+                         case "2":
+                        reportGenerator.ShowFullAssetList();
+                        break;
+                        case "3":
+                        reportGenerator.ShowAssetsByRoom();
+                        break;
+                        case "4":
+                        reportGenerator.ShowAssetsByStudent();
+                        break;
+                        case "5":
+                        reportGenerator.ShowDefectiveAssets();
+                        break;
+                        case "6":
+                        reportGenerator.ShowRepairRequestsReport();
+                        break;
+                        case "7":
+                        reportGenerator.ShowStudentAccommodationHistory();
+                        break;
+                        case "0":
+                        backToMain = true; 
+                        break;
+                        default:
+                        Console.WriteLine("Gozine na motabar.");
+                        break;
+                         }
 
-                                if (!backToMain) 
-                                {
-                                    Console.WriteLine("\nBaraye edame ENTER bezanid...");
-                                    Console.ReadKey();
-                                }
-                            }
-                            break;
+                        if (!backToMain) 
+                        {
+                        Console.WriteLine("\nBaraye edame ENTER bezanid...");
+                        Console.ReadKey();
+                        }
+                        }
+                         break;
 
                         case "0":
                             Console.WriteLine("khoroj...");
